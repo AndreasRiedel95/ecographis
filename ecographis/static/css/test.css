@@ -1,0 +1,18 @@
+.container {
+  max-width: 800px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: red; }
+
+.ele1 {
+  background-color: blue;
+  width: 20px;
+  height: 20px; }
+
+.ele2 {
+  background-color: blue;
+  width: 20px;
+  height: 20px;
+  margin-left: auto; }

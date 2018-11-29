@@ -1,0 +1,71 @@
+.profil-scroll-text {
+  position: absolute;
+  padding: 20px; }
+  .profil-scroll-text.--onhover {
+    opacity: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    -webkit-transition: opacity 0.5s ease;
+    -o-transition: opacity 0.5s ease;
+    transition: opacity 0.5s ease; }
+    .profil-scroll-text.--onhover:hover {
+      opacity: 1; }
+    .profil-scroll-text.--onhover:hover .profil-scroll-content.--onhover {
+      -webkit-animation: fadeInLeft 0.8s;
+      animation: fadeInLeft 0.8s;
+      -webkit-animation-fill-mode: forwards;
+      animation-fill-mode: forwards; }
+
+.profil-scroll-content {
+  color: white;
+  font-family: "Roboto", Avenir, "Helvetica Neue", sans-serif;
+  font-weight: 100; }
+  @media screen and (max-width: 850px) {
+    .profil-scroll-content {
+      color: white; } }
+
+.profil-scroll-headline {
+  height: 180px; }
+
+.svg-hover {
+  text-decoration: none;
+  color: #fff; }
+  .svg-hover:hover > .svg-arrow-link {
+    fill: #237EC6; }
+
+.svg-arrow-link {
+  width: 12px;
+  height: 12px;
+  fill: #fff; }
+
+.profil-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 30px; }
+
+.profil-grid-box.--konzepte {
+  grid-row: 1 / span 2; }
+  @media screen and (max-width: 1000px) {
+    .profil-grid-box.--konzepte {
+      grid-row: auto; } }
+
+.profil-grid-box.--design {
+  grid-row: 1 / span 2; }
+  @media screen and (max-width: 1000px) {
+    .profil-grid-box.--design {
+      grid-row: auto; } }
+
+.profil-grid-box.--foto {
+  grid-row: 1 / span 1; }
+  @media screen and (max-width: 1000px) {
+    .profil-grid-box.--foto {
+      grid-row: auto; } }
+
+.profil-grid-box.--produktion {
+  grid-row: 2 / span 1; }
+  @media screen and (max-width: 1000px) {
+    .profil-grid-box.--produktion {
+      grid-row: auto; } }

@@ -1,0 +1,62 @@
+.profil-scroll-text
+	position: absolute
+	padding: 20px
+	&.--onhover
+		opacity: 0
+		top: 0
+		bottom: 0 
+		right: 0
+		left: 0	
+		background-color: rgba(0,0,0,0.5)
+		transition: opacity 0.5s ease
+		&:hover 
+			opacity: 1
+		&:hover .profil-scroll-content.--onhover
+			animation: fadeInLeft 0.8s 
+			animation-fill-mode: forwards
+
+
+.profil-scroll-content
+	color: white
+	font-family: "Roboto", Avenir, "Helvetica Neue", sans-serif
+	font-weight: 100
+	@media screen and (max-width: 850px)
+		color: white
+
+
+.profil-scroll-headline
+	height: 180px
+
+.svg-hover
+	text-decoration: none
+	color: #fff
+	&:hover > .svg-arrow-link
+		fill: #237EC6
+
+.svg-arrow-link
+	width: 12px
+	height: 12px
+	fill: #fff
+	
+.profil-grid
+	display: grid
+	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr))
+	grid-gap: 30px
+
+.profil-grid-box
+	&.--konzepte
+		grid-row: 1 / span 2
+		@media screen and (max-width: 1000px)
+			grid-row: auto
+	&.--design
+		grid-row: 1 / span 2
+		@media screen and (max-width: 1000px)
+			grid-row: auto
+	&.--foto
+		grid-row: 1 / span 1
+		@media screen and (max-width: 1000px)
+			grid-row: auto
+	&.--produktion
+		grid-row: 2 / span 1
+		@media screen and (max-width: 1000px)
+			grid-row: auto

@@ -1,0 +1,84 @@
+@import 'general/mixin'
+@import 'navigation'
+@import 'header'
+
+.projects-grid
+	display: grid
+	grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+	grid-gap: 30px
+	max-width: 1000px
+	width: 100%
+	margin-left: auto
+	margin-right: auto
+	padding-left: 30px
+	padding-right: 30px
+	text-decoration: none
+	@media screen and (max-width: 450px)
+		padding-left: 20px
+		padding-right: 20px	
+		grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+
+.project-container
+	position: relative
+	text-decoration: none
+	opacity: 1
+	@media all and (hover: hover)
+		height: 300px
+		&:hover .grid-overlay
+			opacity: 1
+		&:hover .gird-overlay-content
+			animation: fadeInLeft 0.8s 
+			animation-fill-mode: forwards
+
+.grid-img
+	object-fit: cover
+	height: 100%
+	width: 100%
+	object-position: center
+	@media all and (hover: none)
+		height: 300px
+	@media screen and (max-width: 850px)
+		height: 300px
+
+.grid-overlay 
+	position: absolute
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	height: 100%
+	width: 100%
+	opacity: 0
+	z-index: 20
+	transition: opacity 0.5s ease
+	text-decoration: none
+	background-color: rgba(35, 126, 198, 0.9)
+	@media all and (hover: none)
+		position: relative
+		opacity: 1
+		background-color: transparent
+
+.gird-overlay-content
+	color: white
+	font-family: "Roboto", Avenir, "Helvetica Neue", sans-serif
+	font-size: 20px
+	line-height: 30px
+	font-weight: 100
+	padding: 20px
+	& > span
+		font-weight: 500 !important
+	@media all and (hover: none)
+		color: #4C4C5F
+		padding: 10px 0 0 0
+		font-size: 16px
+		line-height: 24px
+
+
+@keyframes fadeInLeft
+	@include fadeInLeft
+
+
+.text-link-svg
+	height: 20px
+	width: 20px
+	fill: #237EC6
