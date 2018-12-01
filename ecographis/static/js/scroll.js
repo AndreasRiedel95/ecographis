@@ -48,40 +48,40 @@ function findAncestor (el, cls) {
 
 
 
-// let numSteps = 100
-// let observerObjects = document.querySelectorAll('.observer')
-// let options = {
-// 	root: null,
-// 	rootMargin: "0% 0% -40% 0%",
-// 	threshold: buildThresholdList()
-// }
+let numSteps = 100
+let observerObjects = document.querySelectorAll('.observer')
+let options = {
+	root: null,
+	rootMargin: "0% 0% 0% 0%",
+	threshold: buildThresholdList()
+}
 
-// function buildThresholdList() {
-// 	let thresholds = [];
-// 	for (var i=1.0; i<=numSteps; i++) {
-// 		var ratio = i/numSteps;
-// 		thresholds.push(ratio);
-// 	}
-// 	thresholds.push(0);
-// 	return thresholds;
-// }
+function buildThresholdList() {
+	let thresholds = [];
+	for (var i=1.0; i<=numSteps; i++) {
+		var ratio = i/numSteps;
+		thresholds.push(ratio);
+	}
+	thresholds.push(0);
+	return thresholds;
+}
 
-// observer = new IntersectionObserver(entries => {
-// 	entries.forEach(entry => {
-// 		let target = entry.target
-// 		if (entry.intersectionRatio > 0) {
-// 			console.log(target)
-// 			setTimeout(() => {
-// 				console.log(target)
-// 				target.classList.add('scroll-wrapper-active');	
+observer = new IntersectionObserver(entries => {
+	entries.forEach(entry => {
+		let target = entry.target
+		if (entry.intersectionRatio > 0) {
+			console.log(target)
+			setTimeout(() => {
+				console.log(target)
+				target.classList.add('scroll-wrapper-active');	
 
-// 			},100)
-// 			observer.unobserve(target)
-// 		} 
-// 	});
-// }, options);
+			},100)
+			observer.unobserve(target)
+		} 
+	});
+}, options);
 
 
-// observerObjects.forEach(observerObject => {
-// 	observer.observe(observerObject);
-// });
+observerObjects.forEach(observerObject => {
+	observer.observe(observerObject);
+});

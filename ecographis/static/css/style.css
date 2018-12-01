@@ -357,19 +357,56 @@
   100% {
     opacity: 0; } }
 
+.observer {
+  opacity: 0; }
+
+.scroll-wrapper-active {
+  -webkit-animation: fadeInLeftBanner 0.8s;
+  animation: fadeInLeftBanner 0.8s;
+  -webkit-animation-timing-function: cubic-bezier(0.32, 0.01, 0.36, 0.98);
+  animation-timing-function: cubic-bezier(0.32, 0.01, 0.36, 0.98);
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards; }
+
+@-webkit-keyframes fadeInLeftBanner {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(20%);
+    transform: translateX(20%); }
+  10% {
+    opacity: 1; }
+  75% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0); }
+  100% {
+    opacity: 1; } }
+
+@keyframes fadeInLeftBanner {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(20%);
+    transform: translateX(20%); }
+  10% {
+    opacity: 1; }
+  75% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0); }
+  100% {
+    opacity: 1; } }
+
 .scroll-controll-wrapper {
   position: relative;
   max-width: 100vw;
   margin-right: auto;
   margin-left: auto;
   overflow-y: hidden;
-  scroll-behavior: auto;
-  opacity: 1;
+  scroll-behavior: smooth;
+  opacity: 0;
   height: 450px;
   overflow: hidden; }
   .scroll-controll-wrapper.--profil {
     height: 400px; }
-  @media all and (hover: hover) {
+  @media all and (hover: hover) and (min-width: 850px) {
     .scroll-controll-wrapper {
       margin-bottom: 50px; }
       .scroll-controll-wrapper:hover .scroll-overlay {
@@ -407,12 +444,6 @@
   100% {
     opacity: 1; } }
 
-.scroll-wrapper-active {
-  -webkit-animation: fadeInLeft 0.8s;
-  animation: fadeInLeft 0.8s;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards; }
-
 .scroll-box-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -430,7 +461,10 @@
   scroll-behavior: auto;
   -webkit-overflow-scrolling: touch;
   overflow-y: hidden;
-  cursor: ew-resize; }
+  cursor: ew-resize;
+  -webkit-scroll-snap-type: x mandatory;
+  -ms-scroll-snap-type: x mandatory;
+  scroll-snap-type: x mandatory; }
 
 .scroll-box {
   position: relative;
@@ -442,13 +476,27 @@
   -ms-user-select: none;
   user-select: none;
   cursor: ew-resize;
-  user-drag: none; }
+  user-drag: none;
+  scroll-snap-align: start;
+  scroll-margin-left: calc((100vw  - 950px + 700px) / 2); }
+  @media screen and (max-width: 1048px) {
+    .scroll-box {
+      scroll-margin-left: calc((60px + 700px) / 2); } }
+  @media screen and (max-width: 850px) {
+    .scroll-box {
+      height: 100%;
+      scroll-margin-left: 0; } }
   .scroll-box.--text-profil {
     background-color: #dadada;
     width: 320px; }
-  @media screen and (max-width: 850px) {
-    .scroll-box {
-      height: 100%; } }
+  .scroll-box.--profil {
+    scroll-margin-left: calc((100vw  - 950px) / 2); }
+    @media screen and (max-width: 1048px) {
+      .scroll-box.--profil {
+        scroll-margin-left: 30px; } }
+    @media screen and (max-width: 450px) {
+      .scroll-box.--profil {
+        scroll-margin-left: 0; } }
 
 .scroll-img {
   -o-object-fit: contain;
@@ -486,7 +534,7 @@
   position: absolute;
   top: 0;
   bottom: 0;
-  width: 30vw;
+  width: 350px;
   background-color: rgba(35, 126, 198, 0.9);
   margin-left: calc((100vw  - 950px) / 2);
   opacity: 0;
@@ -498,7 +546,7 @@
   @media screen and (max-width: 1048px) {
     .scroll-overlay {
       margin-left: 30px; } }
-  @media not all and (hover: hover) {
+  @media not all and (hover: hover), (max-width: 850px) {
     .scroll-overlay {
       position: relative;
       opacity: 1;
@@ -518,7 +566,7 @@
   font-weight: 200; }
   .scroll-overlay-content > span {
     font-weight: 500 !important; }
-  @media all and (hover: none) {
+  @media all and (hover: none), (max-width: 850px) {
     .scroll-overlay-content {
       color: #4C4C5F;
       padding: 10px 50px 20px 0;
