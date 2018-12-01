@@ -21,7 +21,6 @@ scrollBoxes.forEach((scrollBox) => {
 
 function onScroll(event){
 	let scrollBox = event.target;
-	console.log("box", scrollBox)
 	let scrollBoxWidth = scrollBox.clientWidth;
 	let scrollBoxWidthContent = scrollBox.scrollWidth - 200;
 	let rightArrow = scrollBox.nextElementSibling.querySelector('.arrow.--right');
