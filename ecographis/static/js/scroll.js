@@ -48,17 +48,17 @@ function findAncestor (el, cls) {
 
 
 
-let numSteps = 100
+let numSteps = 1
 let observerObjects = document.querySelectorAll('.observer')
 let options = {
 	root: null,
-	rootMargin: "0% 0% 0% 0%",
+	rootMargin: "0% 0% -20% 0%",
 	threshold: buildThresholdList()
 }
 
 function buildThresholdList() {
 	let thresholds = [];
-	for (var i=1.0; i<=numSteps; i++) {
+	for (var i=.1; i<=numSteps; i++) {
 		var ratio = i/numSteps;
 		thresholds.push(ratio);
 	}
@@ -66,19 +66,15 @@ function buildThresholdList() {
 	return thresholds;
 }
 
-observer = new IntersectionObserver(entries => {
+observer = new IntersectionObserver((entries, self) => {
 	entries.forEach(entry => {
 		let target = entry.target
 		if (entry.intersectionRatio > 0) {
-			console.log(target)
-			setTimeout(() => {
-				console.log(target)
-				target.classList.add('scroll-wrapper-active');	
-
-			},100)
-			observer.unobserve(target)
-		} 
+			target.classList.add('scroll-wrapper-active');	
+			self.unobserve(entry.target)
+		}
 	});
+
 }, options);
 
 
