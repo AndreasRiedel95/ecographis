@@ -52,7 +52,7 @@ let numSteps = 1
 let observerObjects = document.querySelectorAll('.observer')
 let options = {
 	root: null,
-	rootMargin: "0% 0% -20% 0%",
+	rootMargin: "0% 0% -10% 0%",
 	threshold: buildThresholdList()
 }
 

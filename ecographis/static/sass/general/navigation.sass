@@ -6,9 +6,9 @@ $button-size: 20px
 	justify-self: flex-start
 
 .logo
-	z-index: 100
+	width: 80px
 	height: 30px
-	width: 90px
+	z-index: 100
 
 .nav-wrapper-fixed
 	width: 100%
@@ -19,7 +19,7 @@ $button-size: 20px
 	z-index: 100000
 	background-color: rgb(255,255,255)
 	opacity: 1
-	height: 90px
+	height: 100px
 
 .nav-bar
 	display: flex
@@ -111,7 +111,7 @@ $button-size: 20px
 	background-color: white
 	top: 0
 	left: 0
-	padding-top: 30px
+	padding-top: 35px
 	transform: translateY(-150%)
 	transition: transform 0.6s ease-in-out
 	box-shadow: 10px 10px 150px black
@@ -123,27 +123,6 @@ $button-size: 20px
 		padding-left: 20px
 		padding-right: 20px
 
-.logo-wort-bild
-	position: relative
-	height: 65px
-	width: 157px
-	top: 0px
-	grid-column: 1 / -1
-	@media screen and (max-width: 750px)
-		height: 50px
-		width: 121px
-		position: absolute
-		top: 30px
-
-.menu_headline
-	position: relative
-	color: #676E74
-	font-size: 15px
-	top: -5px
-	font-weight: 200
-	@media screen and (max-width: 750px)
-		display: none
-
 .nav-grid
 	display: grid
 	max-width: 1000px
@@ -152,23 +131,27 @@ $button-size: 20px
 	margin-left: auto
 	margin-right: auto
 	grid-template-columns: 300px 300px
-	grid-template-rows: 150px auto
 	@media screen and (max-width: 950px)
 		padding-left: 120px
 		padding-right: 100px
 	@media screen and (max-width: 750px)
 		grid-template-columns: 1fr
-		grid-template-rows: auto auto
 		padding-left: 0px
 		padding-right: 0px
-		margin-top: 100px
-		margin-left: 110px
+		margin-top: 60px
 
 .menu-content
 	display: flex
 	flex-direction: column
 	font-size: 15px
 	color: #4C4C5F
+
+.menu_headline
+	font-weight: 200
+	margin-bottom: 150px
+	color: #4C4C5F
+	@media screen and (max-width: 750px)
+		display: none
 
 
 .nav-ele
@@ -258,3 +241,6 @@ $button-size: 20px
 
 @keyframes fadeOut
 	@include fadeOut
+
+  
+
