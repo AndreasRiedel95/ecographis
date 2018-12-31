@@ -175,7 +175,9 @@
 .arrow-svg
 	height: 50px
 	width: 100%
-	fill: red
-	transition: background-color 0.2s
+	filter: brightness(100%) contrast(100%)
+	transition: filter 0.3s
 	&.--left
 		transform: rotate(180deg)
+	&:hover
+		filter: brightness(80%) contrast(140%)

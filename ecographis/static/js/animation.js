@@ -1,4 +1,5 @@
 const observers = document.querySelectorAll('.observer')
+var onBeforeUnLoadEvent = false;
 function menuAnimation(){
 	let checkbox = document.querySelector('#change-hamburger');
 	let navEles = document.querySelectorAll('.nav-ele');
@@ -22,6 +23,16 @@ function menuAnimation(){
 		}
 	}
 }
+
+
+
+window.onunload = window.onbeforeunload= function(){
+	if(!onBeforeUnLoadEvent){
+		onBeforeUnLoadEvent = true;
+		let checkbox = document.querySelector('#change-hamburger');
+		checkbox.checked = false
+	}
+};
 
 // function fadeInBackground(){
 // 		let subheadline = document.querySelector('.header-context_subheadline');

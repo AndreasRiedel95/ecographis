@@ -1,4 +1,4 @@
-function setScrollPosition(arrow, direction) {
+ function setScrollPosition(arrow, direction) {
 	let scrollLeft = 0
 	if(direction === 1){
 		scrollLeft = 500
@@ -66,7 +66,7 @@ function buildThresholdList() {
 	return thresholds;
 }
 
-observer = new IntersectionObserver((entries, self) => {
+let observer = new IntersectionObserver((entries, self) => {
 	entries.forEach(entry => {
 		let target = entry.target
 		if (entry.intersectionRatio > 0) {

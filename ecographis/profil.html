@@ -4,19 +4,18 @@
 	<meta charset="UTF-8">
 	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no" name="viewport">
 	<title>ecographis | profil</title>
-	<script defer src="static/js/includeHTML.js"></script>
-	<script defer src="static/js/intersection-observer.js"></script>
-	<script defer src="static/js/scroll-behaviour.js"></script>
-	<script defer src="static/js/animation.js"></script>
-	<script defer src="static/js/scroll.js"></script>
+	<script defer src="static/production/js/includeHTML.js"></script>
+	<script defer src="static/production/js/intersection-observer.js"></script>
+	<script defer src="static/production/js/scroll-behaviour.js"></script>
+	<script defer src="static/production/js/animation.js"></script>
+	<script defer src="static/production/js/scroll.js"></script>
 
-	<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,500,500i" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,500,500i" rel="stylesheet">
-	<link rel="stylesheet" href="static/css/reset.css">
-	<link rel="stylesheet" href="static/css/base.css">
-	<link rel="stylesheet" href="static/css/navigation.css">
-	<link rel="stylesheet" href="static/css/slider.css">
-	<link rel="stylesheet" href="static/css/profil.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,500,500i" rel="preconnect" crossorigin>
+	<link rel="stylesheet" href="static/production/css/reset.css">
+	<link rel="stylesheet" href="static/production/css/base.css">
+	<link rel="stylesheet" href="static/production/css/navigation.css">
+	<link rel="stylesheet" href="static/production/css/slider.css">
+	<link rel="stylesheet" href="static/production/css/profil.css">
 
 	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
@@ -28,7 +27,50 @@
 </head>
 <body>
 <div class="header-footer-wrapper">
-	<div w3-include-html="nav.html"></div>
+	<div class="nav-wrapper-fixed">
+		<div class="nav-bar">
+			<a class="logo-link" href="/">
+				<img class="logo" alt="Ecographis Logo" src="/static/img/svg/eg-logo.svg">
+			</a>
+			<div class="nav-element">
+				<input type="checkbox" id="change-hamburger" onclick=menuAnimation() />
+				<label for="change-hamburger" class="overlay_label"></label>
+				<label for="change-hamburger"  class="hamburger">
+					<span></span>
+					<div class="nav-ele-padding"></div>
+				</label>
+			</div>
+		</div>
+		<div class="menu">
+			<div class="nav-grid">
+				<img class="logo-wort-bild" src="/static/img/svg/eg-logo-wort-bild.svg">
+				<div class="menu-content">
+					<a class="nav-ele" href="/">
+						<div class="nav-ele-pseudo">Home</div>
+					</a>
+					<a class="nav-ele" href="/profil.html">
+						<div class="nav-ele-pseudo">Profil</div>
+					</a>
+					<a class="nav-ele" href="#">
+						<div class="nav-ele-pseudo">Projekte</div>
+					</a>
+				</div>
+				<div class="menu-contact">
+					<ul class="menu-contact-wrapper">
+						<li class="menu-contact_context">ecographis <span class=" menu-contact_context no-wrap">kommunikation + design</span></li>
+						<li class="menu-contact_context">Michael Riedel, Dipl. Designer (FH)</li>
+						<li class="menu-contact_context">Osterholzallee 140-1<br/> 71636 Ludwigsburg</li>
+						<li class="menu-contact_context mt-10">
+							<a href="tel:07141-6437851">07141-6437851</a>
+						</li>
+						<li class="menu-contact_context">
+							<a href="mailto:info@ecographis.com">info@ecographis.com</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
 	<div class="container mt-120 mb-50">
 		<p class="introduction-text">
 			<strong>Mit uns als Partner erhält Ihre Marke ein modernes Image und Design, das überzeugt und auch zukünftig Bestand hat.</strong>
@@ -135,7 +177,7 @@
 					<h1 class="header-1 text-white profil-scroll-headline">Charta für nachhaltiges Design</h1>
 					<p class="profil-scroll-content">
 						<a class="svg-hover" href="https://agd.de/designer/szene/design-nachhaltigkeit/charta-fuer-nachhaltigkeit" target="_blank">
-							Michael Riedel ist Unterzeichner der Charta für nachhaltiges Design, initiiert von der AGD
+							<span class="underline">Michael Riedel ist Unterzeichner der Charta für nachhaltiges Design, initiiert von der AGD</span>
 							<img class="svg-arrow-link alt="Arrow" src="/static/img/svg/eg-arrow.svg"">
 						</a>
 					</p>
@@ -219,18 +261,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="footer">
-		<div class="container">
-			<div class="impressum-datenschutz-wrapper">
-				<a class="footer-link" href="/impressum.html">
-					<div>Impressum</div>
-				</a>
-				<a class="footer-link" href="/datenschutz.html">
-					<div>Datenschutz</div>
-				</a>
-			</div>
-		</div>
-	</div>
+	<div w3-include-html="footer.html"></div>
 </div>
 </body>
 </html>

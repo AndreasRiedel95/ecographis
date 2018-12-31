@@ -3,20 +3,21 @@
 <head>
 	<meta charset="UTF-8">
 	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no" name="viewport">
-	<title>ecographis</title>
-	<script defer src="static/js/includeHTML.js"></script>
-	<script defer src="static/js/intersection-observer.js"></script>
-	<script defer src="static/js/scroll-behaviour.js"></script>
-	<script defer src="static/js/animation.js"></script>
-	<script defer src="static/js/scroll.js"></script>
+	<title>ecographis kommunikation + design</title>
+	<script src="static/production/js/includeHTML.js" defer></script>
+	<script src="static/production/js/intersection-observer.js" defer></script>
+	<script src="static/production/js/scroll-behaviour.js" defer></script>
+	<script src="static/production/js/animation.js" async></script>
+	<script src="static/production/js/scroll.js" defer></script>
 
-	<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,500,500i" rel="stylesheet">
-	<link rel="stylesheet" href="static/css/reset.css">
-	<link rel="stylesheet" href="static/css/navigation.css">
-	<link rel="stylesheet" href="static/css/base.css">
-	<link rel="stylesheet" href="static/css/slider.css">
-	<link rel="stylesheet" href="static/css/style.css">
-
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,500,500i" rel="preconnect" crossorigin>
+	<link rel="stylesheet" href="static/production/css/reset.css">
+	<link rel="stylesheet" href="static/production/css/navigation.css">
+	<link rel="stylesheet" href="static/production/css/base.css">
+	<link rel="stylesheet" href="static/production/css/slider.css">
+	<link rel="stylesheet" href="static/production/css/style.css">
+	
+	<!-- Favicon  -->
 	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
@@ -26,7 +27,50 @@
 	<meta name="theme-color" content="#ffffff">
 </head>
 <body>
-	<div w3-include-html="nav.html"></div>
+	<div class="nav-wrapper-fixed">
+		<div class="nav-bar">
+			<a class="logo-link" href="/">
+				<img class="logo" alt="Ecographis Logo" src="/static/img/svg/eg-logo.svg">
+			</a>
+			<div class="nav-element">
+				<input type="checkbox" id="change-hamburger" onclick=menuAnimation() />
+				<label for="change-hamburger" class="overlay_label"></label>
+				<label for="change-hamburger"  class="hamburger">
+					<span></span>
+					<div class="nav-ele-padding"></div>
+				</label>
+			</div>
+		</div>
+		<div class="menu">
+			<div class="nav-grid">
+				<img class="logo-wort-bild" src="/static/img/svg/eg-logo-wort-bild.svg">
+				<div class="menu-content">
+					<a class="nav-ele" href="/">
+						<div class="nav-ele-pseudo">Home</div>
+					</a>
+					<a class="nav-ele" href="/profil.html">
+						<div class="nav-ele-pseudo">Profil</div>
+					</a>
+					<a class="nav-ele" href="#">
+						<div class="nav-ele-pseudo">Projekte</div>
+					</a>
+				</div>
+				<div class="menu-contact">
+					<ul class="menu-contact-wrapper">
+						<li class="menu-contact_context">ecographis <span class=" menu-contact_context no-wrap">kommunikation + design</span></li>
+						<li class="menu-contact_context">Michael Riedel, Dipl. Designer (FH)</li>
+						<li class="menu-contact_context">Osterholzallee 140-1<br/> 71636 Ludwigsburg</li>
+						<li class="menu-contact_context mt-10">
+							<a href="tel:07141-6437851">07141-6437851</a>
+						</li>
+						<li class="menu-contact_context">
+							<a href="mailto:info@ecographis.com">info@ecographis.com</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
 	<div class="container mt-120">
 		<h2 class="header-2">ecographis kommunikation + design</h2>
 		<p class="introduction-text">
@@ -264,17 +308,6 @@
 			Viele Leute denken Wirtschaftlichkeit oder Nachhaltigkeit. Warum eigentlich oder? <strong>Ökologisch und sozial verantwortliches Handeln ist heute unverzichtbar</strong> – und wenn dies glaubwürdig kommuniziert wird, ein nicht zu unterschätzender Wettbewerbsvorteil.
 		</p>
 	</div>
-	<div class="footer">
-		<div class="container">
-			<div class="impressum-datenschutz-wrapper">
-				<a class="footer-link" href="/impressum.html">
-					<div>Impressum</div>
-				</a>
-				<a class="footer-link" href="/datenschutz.html">
-					<div>Datenschutz</div>
-				</a>
-			</div>
-		</div>
-	</div>
+	<div w3-include-html="footer.html"></div>
 </body>
 </html>

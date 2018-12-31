@@ -1,0 +1,1 @@
+"use strict";document.addEventListener("DOMContentLoaded",function(e){var n=new XMLHttpRequest;n.open("GET","/static/svg/sprite.svg",!0),n.send(),n.onload=function(e){var t=document.createElement("div");t.innerHTML=n.responseText,document.head.insertBefore(t,document.head.childNodes[0])}});
