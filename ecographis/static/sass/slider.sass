@@ -1,8 +1,5 @@
 @import 'general/mixin'
 
-.observer
-	opacity: 0
-
 .scroll-wrapper-active
 	animation: fadeInLeftBanner 0.8s
 	animation-timing-function: cubic-bezier(.32,.01,.36,.98) 
@@ -34,8 +31,6 @@
 @keyframes fadeInLeft
 	@include fadeInLeft
 
-
-
 .scroll-box-wrapper
 	display: flex
 	position: relative
@@ -52,6 +47,19 @@
 	overflow-y: hidden
 	cursor: ew-resize
 	scroll-snap-type: x mandatory
+	scroll-padding-left: calc((100vw - 250px) / 2)
+	@media screen and (max-width: 1048px)
+		scroll-padding-left: 380px
+	@media screen and (max-width: 850px)
+		scroll-padding-left: 30px
+	@media screen and (max-width: 450px)
+		scroll-padding-left: 0px
+	.scroll-controll-wrapper.--profil &
+		scroll-padding-left: calc((100vw - 950px) / 2)
+		@media screen and (max-width: 850px)
+			scroll-padding-left: 30px
+		@media screen and (max-width: 450px)
+			scroll-padding-left: 0px
 	
 .scroll-box
 	position: relative
@@ -61,24 +69,11 @@
 	cursor: ew-resize
 	user-drag: none
 	scroll-snap-align: start
-	scroll-margin-left: calc((100vw  - 950px + 700px) / 2 )
-	@media screen and (max-width: 1048px)
-		scroll-margin-left: calc((60px + 700px) / 2 )
 	@media screen and (max-width: 850px)
 		height: 100%
-		scroll-margin-left: 0
 	&.--text-profil
 		background-color: #dadada
 		width: 320px
-	&.--profil
-		scroll-margin-left: calc((100vw  - 950px) / 2 )
-		@media screen and (max-width: 1048px)
-			scroll-margin-left: 30px
-		@media screen and (max-width: 450px)
-			scroll-margin-left: 0
-
-
-
 
 .scroll-img
 	object-fit: contain

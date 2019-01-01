@@ -31,6 +31,8 @@ window.onunload = window.onbeforeunload= function(){
 		onBeforeUnLoadEvent = true;
 		let checkbox = document.querySelector('#change-hamburger');
 		checkbox.checked = false
+		menuAnimation();
+		
 	}
 };
 

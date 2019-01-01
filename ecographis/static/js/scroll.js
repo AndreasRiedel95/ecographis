@@ -1,9 +1,9 @@
  function setScrollPosition(arrow, direction) {
 	let scrollLeft = 0
 	if(direction === 1){
-		scrollLeft = 500
+		scrollLeft = 400
 	} else {
-		scrollLeft = -500
+		scrollLeft = -400
 	}
 	let scrollBox = arrow.parentNode.previousElementSibling
 	scrollBox.scrollBy({ 
@@ -20,6 +20,7 @@ scrollBoxes.forEach((scrollBox) => {
 })
 
 function onScroll(event){
+	console.log("onscroll")
 	let scrollBox = event.target;
 	let scrollBoxWidth = scrollBox.clientWidth;
 	let scrollBoxWidthContent = scrollBox.scrollWidth - 200;
@@ -37,6 +38,7 @@ function onScroll(event){
 	} else {
 		leftArrow.classList.remove('--arrow-non-active');
 	}
+
 	scrollBox.dataset.scrollstart = scrollBox.scrollLeft
 }
 
@@ -46,7 +48,7 @@ function findAncestor (el, cls) {
     return el;
 }
 
-
+//fade scrollbox in
 
 let numSteps = 1
 let observerObjects = document.querySelectorAll('.observer')
