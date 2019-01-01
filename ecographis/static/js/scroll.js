@@ -1,9 +1,9 @@
  function setScrollPosition(arrow, direction) {
 	let scrollLeft = 0
 	if(direction === 1){
-		scrollLeft = 400
+		scrollLeft = 500
 	} else {
-		scrollLeft = -400
+		scrollLeft = -500
 	}
 	let scrollBox = arrow.parentNode.previousElementSibling
 	scrollBox.scrollBy({ 
@@ -20,7 +20,6 @@ scrollBoxes.forEach((scrollBox) => {
 })
 
 function onScroll(event){
-	console.log("onscroll")
 	let scrollBox = event.target;
 	let scrollBoxWidth = scrollBox.clientWidth;
 	let scrollBoxWidthContent = scrollBox.scrollWidth - 200;
