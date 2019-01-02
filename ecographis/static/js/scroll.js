@@ -1,23 +1,64 @@
- function setScrollPosition(arrow, direction) {
+ function setScrollPosition(element, direction) {
 	let scrollLeft = 0
 	if(direction === 1){
 		scrollLeft = 500
 	} else {
 		scrollLeft = -500
 	}
-	let scrollBox = arrow.parentNode.previousElementSibling
-	scrollBox.scrollBy({ 
+	if(element.classList.contains('arrow')) {
+		element = element.parentNode.previousElementSibling;	
+	}
+	element.scrollBy({ 
 		top: 0,
 		left: scrollLeft, 
 		behavior: 'smooth' 
 	});
-	scrollBox.dataset.diff = scrollBox.scrollLeft
 }
 
 let scrollBoxes = document.querySelectorAll('.scroll-box-wrapper');
+let isDown = false;
+let scrollLeftCustom = 0;
 scrollBoxes.forEach((scrollBox) => {
 	scrollBox.addEventListener('scroll', onScroll, false);
+	scrollBox.addEventListener('mousedown', mouseDown, false);
 })
+
+
+function mouseDown(event) {
+	let scrollBox = findAncestor(event.target, 'scroll-box-wrapper');
+	isDown = true;
+	scrollBox.classList.add('--active');
+	scrollBox.dataset.dragstart = event.pageX - scrollBox.offsetLeft;
+	document.addEventListener('mouseup', mouseUp , false);
+	document.addEventListener('mouseleave', mouseUp , false);
+	document.addEventListener('mousemove', mouseMove, false);
+}
+
+
+function mouseMove(event) {
+	if(!isDown) return;
+	let scrollBox = findAncestor(event.target, 'scroll-box-wrapper');
+	event.preventDefault();
+	const x = event.pageX - scrollBox.offsetLeft;
+	const walk = (x - scrollBox.dataset.dragstart) * 6; //scroll-fast
+	scrollBox.scrollBy({
+		top: 0,
+		left: scrollLeftCustom - walk,
+		behavior: 'smooth'
+	})
+}
+
+function mouseUp(event) {
+	let scrollBox = findAncestor(event.target, 'scroll-box-wrapper');
+	isDown = false;
+	scrollBox.classList.remove('--active');
+
+	document.removeEventListener('mousemove', mouseMove, false);
+	document.removeEventListener('mouseup', mouseUp , false);
+	document.removeEventListener('mouseleave', mouseUp , false);
+	scrollBox.dataset.dragstart = 0;
+
+}
 
 function onScroll(event){
 	let scrollBox = event.target;

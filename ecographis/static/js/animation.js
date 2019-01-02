@@ -24,8 +24,6 @@ function menuAnimation(){
 	}
 }
 
-
-
 window.onunload = window.onbeforeunload= function(){
 	if(!onBeforeUnLoadEvent){
 		onBeforeUnLoadEvent = true;
@@ -35,29 +33,3 @@ window.onunload = window.onbeforeunload= function(){
 		
 	}
 };
-
-// function fadeInBackground(){
-// 		let subheadline = document.querySelector('.header-context_subheadline');
-// 		setTimeout(function(){
-// 			subheadline.style.opacity="1"
-// 			subheadline.classList.add('fade-down-background');
-// 		}, 500);
-
-// }
-
-// fadeInBackground()
-
-// observerSection = new IntersectionObserver(entries => {
-// 	entries.forEach(entry => {
-// 		let target = entry.target;
-// 		if (entry.intersectionRatio > 0	) {
-// 			console.log("in")
-// 			target.classList.add('fade-in')
-// 			observerSection.unobserve(target)
-// 		}
-// 	});
-// });
-
-// observers.forEach(observeMe => {
-// 	observerSection.observe(observeMe);
-// });

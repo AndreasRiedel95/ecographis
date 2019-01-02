@@ -45,7 +45,7 @@
 	scroll-behavior: auto
 	-webkit-overflow-scrolling: touch
 	overflow-y: hidden
-	cursor: ew-resize
+	cursor: pointer
 	scroll-snap-type: x mandatory
 	scroll-padding-left: calc((100vw - 250px) / 2)
 	@media screen and (max-width: 1048px)
@@ -60,13 +60,14 @@
 			scroll-padding-left: 30px
 		@media screen and (max-width: 450px)
 			scroll-padding-left: 0px
+	&.--active
+		cursor: grabbing
 	
 .scroll-box
 	position: relative
 	height: 450px
 	flex-shrink: 0
 	user-select: none
-	cursor: ew-resize
 	user-drag: none
 	scroll-snap-align: start
 	@media screen and (max-width: 850px)
