@@ -29,6 +29,7 @@ function mouseDown(event) {
 	isDown = true;
 	scrollBox.classList.add('--active');
 	scrollBox.dataset.dragstart = event.pageX - scrollBox.offsetLeft;
+	scrollLeftCustom = scrollBox.scrollLeft;
 	document.addEventListener('mouseup', mouseUp , false);
 	document.addEventListener('mouseleave', mouseUp , false);
 	document.addEventListener('mousemove', mouseMove, false);
@@ -40,12 +41,8 @@ function mouseMove(event) {
 	let scrollBox = findAncestor(event.target, 'scroll-box-wrapper');
 	event.preventDefault();
 	const x = event.pageX - scrollBox.offsetLeft;
-	const walk = (x - scrollBox.dataset.dragstart) * 6; //scroll-fast
-	scrollBox.scrollBy({
-		top: 0,
-		left: scrollLeftCustom - walk,
-		behavior: 'smooth'
-	})
+	const walk = (x - scrollBox.dataset.dragstart) * 7; //scroll-fast
+	scrollBox.scrollLeft = scrollLeftCustom - walk;
 }
 
 function mouseUp(event) {
