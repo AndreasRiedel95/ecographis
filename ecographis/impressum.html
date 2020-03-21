@@ -26,15 +26,63 @@
 	<meta name="theme-color" content="#ffffff">
 </head>
 <body>
-	<div w3-include-html="nav.html"></div>
-	<div class="container mt-100">
+	<div class="nav-wrapper-fixed">
+		<div class="nav-bar">
+			<a class="logo-link" href="/">
+				<img class="logo" alt="Ecographis Logo" src="/static/img/svg/eg-logo.svg" />
+			</a>
+			<div class="nav-element">
+				<input type="checkbox" id="change-hamburger" onclick="menuAnimation()" />
+				<label for="change-hamburger" class="overlay_label"></label>
+				<label for="change-hamburger" class="hamburger">
+					<span></span>
+					<div class="nav-ele-padding"></div>
+				</label>
+			</div>
+		</div>
+		<div class="menu" style="transform: translate3d(0, -150%, 0);">
+			<div class="nav-grid">
+				<img class="logo-wort-bild" src="/static/img/svg/eg-logo-wort-bild.svg" />
+				<div class="menu-content">
+					<a class="nav-ele" href="/">
+						<div class="nav-ele-pseudo">Home</div>
+					</a>
+					<a class="nav-ele" href="/profil">
+						<div class="nav-ele-pseudo">Profil</div>
+					</a>
+				</div>
+				<div class="menu-contact">
+					<ul class="menu-contact-wrapper">
+						<li class="menu-contact_context">
+							ecographis <span class=" menu-contact_context no-wrap">kommunikation + design</span>
+						</li>
+						<li class="menu-contact_context">Michael Riedel, Dipl. Designer (FH)</li>
+						<li class="menu-contact_context">
+							Conrad-Röntgen Str. 23<br />
+							74321 Bietigheim-Bissingen
+						</li>
+						<li class="menu-contact_context mt-10">
+							<a href="tel:07141-6437851">07141-6437851</a>
+						</li>
+						<li class="menu-contact_context">
+							<a href="mailto:info@ecographis.com">info@ecographis.com</a>
+						</li>
+						<li class="menu-contact_context mt-10">
+							<a class='black underline' target='_blank' href="/static/assets/AVG_ecographis.pdf">Allgemeine Vertragsgrundlagen</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container margin">
 		<div class="impressum-container mb-100">
 			<div class="impressum">
 				<p class="mb-20">
 					eco<span class="bold">graphis</span> kommunikation + design <br> Michael Riedel, Dipl. Designer (FH)
 				</p>
 				<p class="mb-20">
-					Osterholzallee 140-1 <br> 71636 Ludwigsburg
+					Conrad-Röntgen Str. 23 <br> 74321 Bietigheim-Bissingen
 				</p>
 				<ul class="mb-20">
 					<li><span class="bold">Telefon:</span> 07141-6437851</li>
@@ -61,17 +109,6 @@
 			</div>
 		</div>
 	</div>
-	<div class="footer">
-		<div class="container">
-			<div class="impressum-datenschutz-wrapper">
-				<a class="footer-link" href="/impressum.html">
-					<div>Impressum</div>
-				</a>
-				<a class="footer-link" href="/datenschutz.html">
-					<div>Datenschutz</div>
-				</a>
-			</div>
-		</div>
-	</div>
+	<div w3-include-html="footer"></div>
 </body>
 </html>

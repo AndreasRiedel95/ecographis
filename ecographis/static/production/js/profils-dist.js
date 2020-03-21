@@ -1,0 +1,2 @@
+"use strict";document.onreadystatechange=function(e){if("complete"===document.readyState){var url_string=window.location.href;console.log(url_string),"nachhaltige-kommunikation"===new URL(url_string).searchParams.get("p")&&(document.getElementById("nachhaltige-kommunikation").scrollIntoView(),window.history.replaceState(null,null,window.location.pathname),translateInnerContainer())}};
+//# sourceMappingURL=profils-dist.js.map

@@ -24,6 +24,8 @@
 	@media screen and (max-width: 450px)
 		padding-left: 20px
 		padding-right: 20px	
+	@media all and (hover: none)
+		grid-row-gap: 60px
 
 .project-container
 	position: relative
@@ -58,9 +60,9 @@
 	text-decoration: none
 	background-color: rgba(35, 126, 198, 0.9)
 	@media all and (hover: none)
+		position: relative
 		opacity: 1
-		top: auto
-		height: auto
+		background: transparent
 
 .gird-overlay-content
 	color: white
@@ -72,11 +74,64 @@
 	& > span
 		font-weight: 500 !important
 	@media all and (hover: none)
-		font-size: 16px
-		line-height: 24px
-		padding: 15px
+		position: absolute
+		color: #000
+		padding-top: 10px
+		padding-right: 0px
+		padding-left: 0px
+		& > span
+			font-size: 16px
+			line-height: 18px
 		& > p 
 			display: none
 
+.button-headline-wrapper
+	cursor: pointer
+	display: flex
+	align-items: center
+	margin-right: auto
+	text-decoration: none
+	display: inline-block
+	&:hover > .inner-button-wrapper > .underline
+		background-size: 100% 100%
+	&:hover > > .inner-button-wrapper > .arrow-inner-container > .arrow-svg-inner-container
+		filter: brightness(80%) contrast(140%)
+
+.arrow-inner-container
+	position: relative
+	height: 20px
+	border: 0
+	padding: 0
+	margin: 0
+	outline: none
+	background-color: transparent
+	cursor: pointer
+	opacity: 1
+	display: flex
+	align-items: center
+	pointer-events: all
+	display: inline
+	margin-right: 10px
+
+.arrow-svg-inner-container
+	height: 20px
+
+.underline 
+	width: calc(100%)
+	background-image: linear-gradient(transparent calc(100% - 2px), #2b83c3 2px)
+	background-repeat: no-repeat
+	background-size: 0% 100%
+	transition: background-size 0.5s
+
+.next-headline 
+	text-decoration: none
+	color: #4C4C5F
+
+.inner-button-wrapper
+	display: flex
+	justify-content: center
+	align-items: center
+
 @keyframes fadeInLeft
 	@include fadeInLeft
+

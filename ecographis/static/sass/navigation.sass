@@ -107,13 +107,13 @@ $button-size: 20px
 	z-index: 80
 	position: fixed
 	color: black
-	height: 500px
+	height: 430px
 	width: 100%
 	background-color: white
 	top: 0
 	left: 0
 	padding-top: 30px
-	transform: translateY(-150%)
+	transform: translate3d(0, -150%, 0)
 	transition: transform 0.6s ease-in-out
 	box-shadow: 10px 10px 150px black
 	padding-left: 30px
@@ -230,6 +230,11 @@ $button-size: 20px
 		color: #237EC6
 		&:hover
 			color: #083759
+	& > a.black
+		color: #000 !important
+		padding-bottom: 3px
+	&:hover > .underline
+		background-size: 100% 100%
 
 .overlay_label
 	position: fixed
@@ -251,7 +256,7 @@ $button-size: 20px
 	transition: opacity 0.3s
 @for $i from 1 through 6
 	.doAnim:nth-child(#{$i}) 
-		animation-delay: 0.1s * $i;
+		animation-delay: 0.1s * $i
 
 
 @keyframes fadeIn 

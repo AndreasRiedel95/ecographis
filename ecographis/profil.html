@@ -1,267 +1,407 @@
 <!DOCTYPE html>
 <html lang="de">
-<head>
-	<meta charset="UTF-8">
-	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no" name="viewport">
-	<title>ecographis | profil</title>
-	<script defer src="static/production/js/includeHTML.js"></script>
-	<script defer src="static/production/js/intersection-observer.js"></script>
-	<script defer src="static/production/js/scroll-behaviour.js"></script>
-	<script defer src="static/production/js/animation.js"></script>
-	<script defer src="static/production/js/scroll.js"></script>
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no"
+			name="viewport"
+		/>
+		<title>ecographis | profil</title>
+		<script src="static/production/js/profils-dist.js" defer></script>
+		<script src="static/production/js/includeHTML.js" defer></script>
+		<script src="static/production/js/intersection-observer.js" defer></script>
+		<script src="static/production/js/scroll-behaviour-dist.js" defer></script>
+		<script src="static/production/js/animation.js" async></script>
+		<script src="static/production/js/scroll.js" defer></script>
 
-	<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,500,500i" rel="preconnect" crossorigin>
-	<link rel="stylesheet" href="static/production/css/reset.css">
-	<link rel="stylesheet" href="static/production/css/base.css">
-	<link rel="stylesheet" href="static/production/css/navigation.css">
-	<link rel="stylesheet" href="static/production/css/slider.css">
-	<link rel="stylesheet" href="static/production/css/profil.css">
+		<link
+			href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,500,500i"
+			rel="preconnect"
+			crossorigin
+		/>
+		<link rel="stylesheet" href="static/production/css/reset.css" />
+		<link rel="stylesheet" href="static/production/css/base.css" />
+		<link rel="stylesheet" href="static/production/css/navigation.css" />
+		<link rel="stylesheet" href="static/production/css/slider.css" />
+		<link rel="stylesheet" href="static/production/css/profil.css" />
 
-	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
-	<link rel="manifest" href="/favicon/site.webmanifest">
-	<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
-	<meta name="msapplication-TileColor" content="#da532c">
-	<meta name="theme-color" content="#ffffff">
-</head>
-<body>
-<div class="header-footer-wrapper">
-	<div class="nav-wrapper-fixed">
-		<div class="nav-bar">
-			<a class="logo-link" href="/">
-				<img class="logo" alt="Ecographis Logo" src="/static/img/svg/eg-logo.svg">
-			</a>
-			<div class="nav-element">
-				<input type="checkbox" id="change-hamburger" onclick=menuAnimation() />
-				<label for="change-hamburger" class="overlay_label"></label>
-				<label for="change-hamburger"  class="hamburger">
-					<span></span>
-					<div class="nav-ele-padding"></div>
-				</label>
-			</div>
-		</div>
-		<div class="menu">
-			<div class="nav-grid">
-				<img class="logo-wort-bild" src="/static/img/svg/eg-logo-wort-bild.svg">
-				<div class="menu-content">
-					<a class="nav-ele" href="/">
-						<div class="nav-ele-pseudo">Home</div>
+		<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
+		<link rel="manifest" href="/favicon/site.webmanifest" />
+		<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5" />
+		<meta name="msapplication-TileColor" content="#da532c" />
+		<meta name="theme-color" content="#ffffff" />
+	</head>
+	<body>
+		<div class="header-footer-wrapper">
+			<div class="nav-wrapper-fixed">
+				<div class="nav-bar">
+					<a class="logo-link" href="/">
+						<img class="logo" alt="Ecographis Logo" src="/static/img/svg/eg-logo.svg" />
 					</a>
-					<a class="nav-ele" href="/profil.html">
-						<div class="nav-ele-pseudo">Profil</div>
-					</a>
-					<a class="nav-ele" href="#">
-						<div class="nav-ele-pseudo">Projekte</div>
-					</a>
+					<div class="nav-element">
+						<input type="checkbox" id="change-hamburger" onclick="menuAnimation()" />
+						<label for="change-hamburger" class="overlay_label"></label>
+						<label for="change-hamburger" class="hamburger">
+							<span></span>
+							<div class="nav-ele-padding"></div>
+						</label>
+					</div>
 				</div>
-				<div class="menu-contact">
-					<ul class="menu-contact-wrapper">
-						<li class="menu-contact_context">ecographis <span class=" menu-contact_context no-wrap">kommunikation + design</span></li>
-						<li class="menu-contact_context">Michael Riedel, Dipl. Designer (FH)</li>
-						<li class="menu-contact_context">Osterholzallee 140-1<br/> 71636 Ludwigsburg</li>
-						<li class="menu-contact_context mt-10">
-							<a href="tel:07141-6437851">07141-6437851</a>
-						</li>
-						<li class="menu-contact_context">
-							<a href="mailto:info@ecographis.com">info@ecographis.com</a>
-						</li>
-					</ul>
+				<div class="menu" style="transform: translate3d(0, -150%, 0);">
+					<div class="nav-grid">
+						<img class="logo-wort-bild" src="/static/img/svg/eg-logo-wort-bild.svg" />
+						<div class="menu-content">
+							<a class="nav-ele" href="/">
+								<div class="nav-ele-pseudo">Home</div>
+							</a>
+							<a class="nav-ele" href="/profil">
+								<div class="nav-ele-pseudo">Profil</div>
+							</a>
+						</div>
+						<div class="menu-contact">
+							<ul class="menu-contact-wrapper">
+								<li class="menu-contact_context">
+									ecographis <span class=" menu-contact_context no-wrap">kommunikation + design</span>
+								</li>
+								<li class="menu-contact_context">Michael Riedel, Dipl. Designer (FH)</li>
+								<li class="menu-contact_context">
+									Conrad-Röntgen Str. 23<br />
+									74321 Bietigheim-Bissingen
+								</li>
+								<li class="menu-contact_context mt-10">
+									<a href="tel:07141-6437851">07141-6437851</a>
+								</li>
+								<li class="menu-contact_context">
+									<a href="mailto:info@ecographis.com">info@ecographis.com</a>
+								</li>
+								<li class="menu-contact_context mt-10">
+									<a class='black underline' target='_blank' href="/static/assets/AVG_ecographis.pdf">Allgemeine Vertragsgrundlagen</a>
+								</li>
+							</ul>
+						</div>
+					</div>
 				</div>
 			</div>
-		</div>
-	</div>
-	<div class="container mt-120 mb-50">
-		<p class="introduction-text">
-			<strong>Mit uns als Partner erhält Ihre Marke ein modernes Image und Design, das überzeugt und auch zukünftig Bestand hat.</strong>
-		</p>
-	</div>
-	<div class="scroll-controll-wrapper --profil mt-50 observer ">
-		<div class="scroll-box-wrapper scroll-box-wrapper-js" data-dragstart="0">
-			<div class="padding"></div>
-			<div class="scroll-box --profil scroll-box-js active">
-				<div class="profil-scroll-text">
-					<h1 class="header-1 text-white profil-scroll-headline">Kreativ <br> Nachhaltig <br> Fair</h1>
-					<p class="profil-scroll-content">
-						– unser Versprechen. <br> Wir helfen Ihnen dabei, Ihre Kommunikation zukunftsorientiert und nachhaltig auszurichten.
+			<div class="container margin mb-50">
+				<p class="introduction-text">
+					<strong
+						>Mit uns als Partner erhält Ihre Marke ein modernes Image und Design, das überzeugt und auch
+						zukünftig Bestand hat.</strong
+					>
+				</p>
+			</div>
+			<div class="scroll-controll-wrapper --profil mt-50 observer ">
+				<div class="scroll-box-wrapper scroll-box-wrapper-js" data-dragstart="0">
+					<div class="padding"></div>
+					<div class="scroll-box --profil scroll-box-js active">
+						<div class="profil-scroll-text">
+							<h1 class="header-1 text-white profil-scroll-headline">
+								Kreativ <br />
+								Nachhaltig <br />
+								Fair
+							</h1>
+							<p class="profil-scroll-content">
+								– unser Versprechen. <br />
+								Wir helfen Ihnen dabei, Ihre Kommunikation zukunftsorientiert und nachhaltig
+								auszurichten.
+							</p>
+						</div>
+						<img
+							class="scroll-img --profil"
+							alt="scroll Img"
+							src="./static/img/profil/Kugel_Blau_web2.jpg"
+						/>
+					</div>
+					<div class="scroll-box --profil scroll-box-js">
+						<div class="profil-scroll-text">
+							<h1 class="header-1 text-white profil-scroll-headline">Marken entwickeln</h1>
+							<p class="profil-scroll-content">
+								Unsere Arbeit stützt Ihre Positionierung und Ihr Markenziel. Damit Ihre Kunden
+								langfristig auf Ihr Unternehmen und Ihre Produkte vertrauen.
+							</p>
+						</div>
+						<img
+							class="scroll-img --profil"
+							alt="scroll Img"
+							src="./static/img/profil/Taika-Anz_web2.jpg"
+						/>
+					</div>
+					<div class="scroll-box --profil scroll-box-js">
+						<div class="profil-scroll-text">
+							<h1 class="header-1 text-white profil-scroll-headline">Mit Design überzeugen</h1>
+							<p class="profil-scroll-content">
+								Um die Qualität Ihrer Produkte und Leistungen adäquat zu unterstreichen, setzen wir auf
+								professionelles Design, das mehr ist als nur ein „neuer Anstrich“.
+							</p>
+						</div>
+						<img
+							class="scroll-img --profil"
+							alt="scroll Img"
+							src="./static/img/profil/Farbkreis_web2.jpg"
+						/>
+					</div>
+					<div class="scroll-box --profil scroll-box-js">
+						<div class="profil-scroll-text">
+							<h1 class="header-1 text-white profil-scroll-headline">
+								Differenzierung <br />
+								im Markt
+							</h1>
+							<p class="profil-scroll-content">
+								Mit einer klaren Positionierung, prägnanter Gestaltung und eigenständigen Ideen heben
+								Sie sich von anderen Marktteilnehmern ab und werden deshalb besser wahrgenommen.
+							</p>
+						</div>
+						<img
+							class="scroll-img --profil"
+							alt="scroll Img"
+							src="./static/img/profil/Worksh_Postit_web2.jpg"
+						/>
+					</div>
+					<div class="scroll-box --profil scroll-box-js">
+						<div class="profil-scroll-text">
+							<h1 class="header-1 text-white profil-scroll-headline">Nachhaltigkeit in der Praxis</h1>
+							<p class="profil-scroll-content">
+								Ökologisch und sozial verantwortliches Handeln wird immer mehr zu einem Erfolgsfaktor.
+								Es kommt darauf an, diese Haltung stetig zu entwickleln und glaubwürdig zu
+								kommunizieren.
+							</p>
+						</div>
+						<img class="scroll-img --profil" alt="scroll Img" src="./static/img/profil/ecogrid_web2.jpg" />
+					</div>
+					<div class="padding"></div>
+				</div>
+				<div class="scroll-controls">
+					<button class="arrow --left --arrow-non-active" onclick="setScrollPosition(this, -1)">
+						<img class="arrow-svg --left" alt="Arrow" src="/static/img/svg/eg-arrow.svg" />
+					</button>
+					<button class="arrow --right" onclick="setScrollPosition(this, 1)">
+						<img class="arrow-svg" alt="Arrow" src="/static/img/svg/eg-arrow.svg" />
+					</button>
+				</div>
+			</div>
+			<div class="scroll-controll-wrapper --profil mt-50 observer">
+				<div class="scroll-box-wrapper  scroll-box-wrapper-js" data-dragstart="0">
+					<div class="padding"></div>
+					<div class="scroll-box --profil scroll-box-js active">
+						<div class="profil-scroll-text --onhover">
+							<p class="profil-scroll-content --onhover mt-180">
+								„Mit mir als Inhaber von ecographis haben Sie einen verantwortlichen Ansprechpartner,
+								der Ihnen zuverlässigen Service und professionelle Auftragsabwicklung garantiert.”
+							</p>
+						</div>
+						<img
+							class="scroll-img --profil --portrait"
+							alt="scroll Img"
+							src="./static/img/profil/Mein_Portrait_web2.jpg"
+						/>
+					</div>
+					<div class="scroll-box --profil --text-profil scroll-box-js active">
+						<div class="profil-scroll-text">
+							<p class="mb-20">
+								<strong
+									>Michael Riedel <br />
+									Dipl. Designer (FH)</strong
+								>
+							</p>
+							<p>
+								„Nach mehr als 20 Jahren Erfahrung auf Unternehmensseite kenne ich die Bedürfnisse der
+								Unternehmen und weiß, worauf es ankommt.”
+							</p>
+						</div>
+					</div>
+					<div class="scroll-box --profil scroll-box-js active">
+						<div class="profil-scroll-text">
+							<h1 class="header-1 text-white profil-scroll-headline">Netzwerk</h1>
+							<p class="profil-scroll-content">
+								Meine Kernkompetenzen Konzeption, Beratung und Design werden je nach Projekt ergänzt
+								durch Partner aus den Bereichen: Text und Konzeption · Fotografie · Webprogrammierung ·
+								Illustration · Druck · Messebau · Werbetechnik etc.
+							</p>
+						</div>
+						<img
+							class="scroll-img --profil"
+							alt="scroll Img"
+							src="./static/img/profil/Spinnennetz_web2.jpg"
+						/>
+					</div>
+					<div class="scroll-box --profil scroll-box-js active">
+						<div class="profil-scroll-text">
+							<p class="profil-scroll-content">
+								ecographis ist Mitglied in der AGD (Allianz Deutscher Designer), des größten deutschen
+								Designer-Netzwerkes.
+							</p>
+						</div>
+						<img
+							class="scroll-img --profil"
+							alt="scroll Img"
+							src="./static/img/profil/agd_signet_farbig_web2.jpg"
+						/>
+					</div>
+					<div class="scroll-box --profil scroll-box-js active">
+						<div class="profil-scroll-text">
+							<h1 class="header-1 text-white profil-scroll-headline">Charta für nachhaltiges Design</h1>
+							<p class="profil-scroll-content">
+								<a
+									class="svg-hover"
+									href="https://agd.de/designer/szene/design-nachhaltigkeit/charta-fuer-nachhaltigkeit"
+									target="_blank"
+								>
+									<span class="underline"
+										>Michael Riedel ist Unterzeichner der Charta für nachhaltiges Design, initiiert
+										von der AGD</span
+									>
+									<img class="svg-arrow-link alt="Arrow" src="/static/img/svg/eg-arrow.svg"">
+								</a>
+							</p>
+						</div>
+						<img
+							class="scroll-img --profil"
+							alt="scroll Img"
+							src="./static/img/profil/Regenwald_web2.jpg"
+						/>
+					</div>
+					<div class="padding"></div>
+				</div>
+				<div class="scroll-controls">
+					<button class="arrow --left --arrow-non-active" onclick="setScrollPosition(this, -1)">
+						<img class="arrow-svg --left" alt="Arrow" src="/static/img/svg/eg-arrow.svg" />
+					</button>
+					<button class="arrow --right" onclick="setScrollPosition(this, 1)">
+						<img class="arrow-svg" alt="Arrow" src="/static/img/svg/eg-arrow.svg" />
+					</button>
+				</div>
+			</div>
+			<div class="container mt-50">
+				<div id="nachhaltige-kommunikation" style="position: absolute; top: -100px; left: 0"></div>
+				<div class="inner-container" data-page="1">
+					<h2 class="header-3 mb-20">Unsere Leistungen – konkret</h2>
+					<p class="mb-30">
+						Sie kommunizieren mit Kunden, Mitarbeitern und Öffentlichkeit. Und nutzen dafür z.B. Internet,
+						Broschüren, Anzeigen, Displays, Verpackungen und Messen. In all diesen Bereichen unterstützen
+						wir Sie professionell.
+					</p>
+					<p class="mb-30">
+						Unsere Arbeit beginnt, wenn Sie es wünschen, bereits bei der Positionierung Ihres Unternehmens
+						bzw. Produktes oder mit der Entwicklung eines Kommunikationskonzeptes.
+					</p>
+					<p class="mb-30">
+						Eine zentrale Rolle spielt das (Corporate) Design, denn das visuelle Erscheinungsbild wird als
+						Erstes wahrgenommen und prägt den Eindruck des Betrachters. Im Bereich Design profitieren Sie
+						von unserer Kompetenz, die alle theoretischen und praktischen Aspekte umfasst.
 					</p>
 				</div>
-				<img class="scroll-img --profil" alt="scroll Img" src="./static/img/profil/Kugel_Blau_web2.jpg">
-			</div>
-			<div class="scroll-box --profil scroll-box-js">
-				<div class="profil-scroll-text">
-					<h1 class="header-1 text-white profil-scroll-headline">Marken entwickeln</h1>
-					<p class="profil-scroll-content">
-						Unsere Arbeit stützt Ihre Positionierung und Ihr Markenziel. Damit Ihre Kunden langfristig auf Ihr Unternehmen und Ihre Produkte vertrauen.
-					</p>
-				</div>
-				<img class="scroll-img --profil" alt="scroll Img" src="./static/img/profil/Taika-Anz_web2.jpg">
-			</div>
-			<div class="scroll-box --profil scroll-box-js">
-				<div class="profil-scroll-text">
-					<h1 class="header-1 text-white profil-scroll-headline">Mit Design überzeugen</h1>
-					<p class="profil-scroll-content">
-						Um die Qualität Ihrer Produkte und Leistungen adäquat zu unterstreichen, setzen wir auf professionelles Design, das mehr ist als nur ein „neuer Anstrich“.
-					</p>
-				</div>
-				<img class="scroll-img --profil" alt="scroll Img" src="./static/img/profil/Farbkreis_web2.jpg">
-			</div>
-			<div class="scroll-box --profil scroll-box-js">
-				<div class="profil-scroll-text">
-					<h1 class="header-1 text-white profil-scroll-headline">Differenzierung <br> im Markt</h1>
-					<p class="profil-scroll-content">
-						Mit einer klaren Positionierung, prägnanter Gestaltung und eigenständigen Ideen heben Sie sich von anderen Marktteilnehmern ab und werden deshalb besser wahrgenommen.
-					</p>
-				</div>
-				<img class="scroll-img --profil" alt="scroll Img" src="./static/img/profil/Worksh_Postit_web2.jpg">
-			</div>
-			<div class="scroll-box --profil scroll-box-js">
-				<div class="profil-scroll-text">
-					<h1 class="header-1 text-white profil-scroll-headline">Nachhaltigkeit in der Praxis</h1>
-					<p class="profil-scroll-content">
-						Ökologisch und sozial verantwortliches Handeln wird immer mehr zu einem Erfolgsfaktor. Es kommt darauf an, diese Haltung stetig zu entwickleln und glaubwürdig zu kommunizieren.
-					</p>
-				</div>
-				<img class="scroll-img --profil" alt="scroll Img" src="./static/img/profil/ecogrid_web2.jpg">
-			</div>
-			<div class="padding"></div>
-		</div>
-		<div class="scroll-controls">
-			<button class="arrow --left --arrow-non-active" onclick="setScrollPosition(this, -1)">
-				<img class="arrow-svg --left" alt="Arrow" src="/static/img/svg/eg-arrow.svg">
-			</button>
-			<button class="arrow --right" onclick="setScrollPosition(this, 1)">
-				<img class="arrow-svg" alt="Arrow" src="/static/img/svg/eg-arrow.svg">
-			</button>
-		</div>
-	</div>
-	<div class="scroll-controll-wrapper --profil mt-50 observer">
-		<div class="scroll-box-wrapper  scroll-box-wrapper-js" data-dragstart="0">
-			<div class="padding"></div>
-			<div class="scroll-box --profil scroll-box-js active">
-				<div class="profil-scroll-text --onhover">
-					<p class="profil-scroll-content --onhover mt-180">
-						„Mit mir als Inhaber von ecographis haben Sie einen verantwortlichen Ansprechpartner, der Ihnen zuverlässigen Service und professionelle Auftragsabwicklung garantiert.”
-					</p>
-				</div>
-				<img class="scroll-img --profil --portrait" alt="scroll Img" src="./static/img/profil/Mein_Portrait_web2.jpg">
-			</div>
-			<div class="scroll-box --profil --text-profil scroll-box-js active">
-				<div class="profil-scroll-text">
-					<p class="mb-20"> <strong>Michael Riedel <br> Dipl. Designer (FH)</strong></p>
+				<div class="inner-container m--hidden" data-page="2">
+					<h2 class="header-3 mb-20">Nachhaltige Kommunikation</h2>
 					<p>
-						„Nach mehr als 20 Jahren Erfahrung auf Unternehmensseite kenne ich die Bedürfnisse der Unternehmen und weiß, worauf es ankommt.”
+						Nachhaltige Kommunikation umfasst drei Komponenten:
+					</p>
+					<div class="inner-container__grid-wrapper">
+						<div class="inner-container__grid-item">
+							<p class="mt-20"><strong>1.Nachhaltig konzipierte Kommunikation</strong></p>
+							<ul class="inner-container__ul-list">
+								<li>umweltschonend</li>
+								<li>sozial verantwortungsvoll</li>
+								<li>geeignete Kommunikationsmittel</li>
+								<li>Weniger ist mehr</li>
+								<li>nachhaltige Medienproduktion. <a class="link" href="https://agd.de/designer/szene/design-nachhaltigkeit/charta-fuer-nachhaltigkeit" target="_blank"
+								>Siehe Charta nachhaltige Kommunikation </a> </li>
+							</ul>
+						</div>
+						<div class="inner-container__grid-item">
+							<p class="mt-20"><strong>2. Kommunikation der Nachhaltigkeit</strong></p>
+							<ul class="inner-container__ul-list">
+								<li>Transparenz</li>
+								<li>Sensibilisierung der Öffentlichkeit, Mitarbeiter, Kunden</li>
+								<li>Multiplikatorenfunktion „tue Gutes und rede darüber“</li>
+								<li>Imagebildung/-pflege „attraktiv durch Nachhaltigkeit“</li>
+								<li>Positionierung ggü. dem Wettbewerb</li>
+							</ul>
+						</div>
+						<div class="inner-container__grid-item">
+							<p class="mt-20"><strong>3. Nachhaltige Wirkung der Kommunikation</strong></p>
+							<ul class="inner-container__ul-list">
+								<li>prägnante und anhaltende Wirkung</li>
+								<li>nachhaltige Markenführung – Einbinden aller Unternehmensbereiche</li>
+							</ul>
+						</div>
+					</div>
+					<p class="mt-30">
+						ecographis erarbeitet gemeinsam mit dem Kunden ein Konzept, das diese Aspekte in Design, Werbung
+						und Öffentlichkeitsarbeit berücksichtigt. So entstehen durch diese (unkonventionelle) Sichtweise
+						oft neue und innovative Kommunikations-Lösungen.
 					</p>
 				</div>
-			</div>
-			<div class="scroll-box --profil scroll-box-js active">
-				<div class="profil-scroll-text">
-					<h1 class="header-1 text-white profil-scroll-headline">Netzwerk</h1>
-					<p class="profil-scroll-content">
-						Meine Kernkompetenzen Konzeption, Beratung und Design werden je nach Projekt ergänzt durch Partner aus den Bereichen: Text und Konzeption · Fotografie ·
-						Webprogrammierung · Illustration · Druck · Messebau · Werbetechnik etc.
-					</p>
+				<div class="controll-wrapper mt-30">
+					<div class="button-headline-wrapper" onclick="translateInnerContainer()">
+						<button class="arrow-inner-container">
+							<img class="arrow-svg-inner-container" alt="Arrow" src="/static/img/svg/eg-arrow.svg" />
+						</button>
+						<div class="next-headline underline">Nachhaltige Kommunikation</div>
+					</div>
+					<div class="page-counter-wrapper">
+						<span class="page-1">1</span>
+						<span class="">/</span>
+						<span class="page-2">2</span>
+					</div>
 				</div>
-				<img class="scroll-img --profil" alt="scroll Img" src="./static/img/profil/Spinnennetz_web2.jpg">
-			</div>
-			<div class="scroll-box --profil scroll-box-js active">
-				<div class="profil-scroll-text">
-					<p class="profil-scroll-content">
-						ecographis ist Mitglied in der AGD (Allianz Deutscher Designer), des größten deutschen Designer-Netzwerkes.
-					</p>
+				<div class="profil-grid mt-80 mb-80">
+					<div class="profil-grid-box --konzepte">
+						<h3 class="header-3 mb-20">Werbe- und Kommunikationkonzepte</h3>
+						<ul class="mb-10">
+							<li>Beratung</li>
+							<li>Markenbildung, Markenpflege</li>
+							<li>Positionierung</li>
+							<li>Zielgruppen-Definition</li>
+							<li>Kommunikationsziele</li>
+						</ul>
+						<ul>
+							<li>Marketing-/Werbemaßnahmen</li>
+							<li>Produkteinführungen</li>
+							<li>Print, Web-Entwicklung</li>
+							<li>Corporate Design</li>
+							<li>Packaging, Produktausstattung</li>
+							<li>Werbemittel, Give-Aways</li>
+						</ul>
+					</div>
+					<div class="profil-grid-box --design">
+						<h3 class="header-3 mb-20">Grafik-Design</h3>
+						<ul>
+							<li>Logos, Schriftzüge</li>
+							<li>Geschäftsausstattungen</li>
+							<li>(Visitenkarten, Briefschaften Gebäude- und Fahrzeugkennzeichnung)</li>
+							<li>Imagebroschüren</li>
+							<li>Verpackungsdesign</li>
+							<li>Prospekte, Flyer</li>
+							<li>Anzeigen</li>
+							<li>Banner, Plakate, Fahnen</li>
+							<li>Webdesign</li>
+							<li>Messedesign</li>
+							<li>etc.</li>
+						</ul>
+					</div>
+					<div class="profil-grid-box --foto">
+						<h3 class="header-3 mb-20">Fotografie</h3>
+						<ul>
+							<li>Produktfotografie</li>
+							<li>Reportagefotografie</li>
+							<li>Bildbearbeitung</li>
+							<li>Fotoretusche</li>
+							<li>Fotocomposing</li>
+						</ul>
+					</div>
+					<div class="profil-grid-box --produktion">
+						<h3 class="header-3 mb-20">Medienproduktion Steuerung/Koordination</h3>
+						<ul>
+							<li>Druck</li>
+							<li>Webprogrammierung</li>
+							<li>Messeauftritte</li>
+						</ul>
+					</div>
 				</div>
-				<img class="scroll-img --profil" alt="scroll Img" src="./static/img/profil/agd_signet_farbig_web2.jpg">
 			</div>
-			<div class="scroll-box --profil scroll-box-js active">
-				<div class="profil-scroll-text">
-					<h1 class="header-1 text-white profil-scroll-headline">Charta für nachhaltiges Design</h1>
-					<p class="profil-scroll-content">
-						<a class="svg-hover" href="https://agd.de/designer/szene/design-nachhaltigkeit/charta-fuer-nachhaltigkeit" target="_blank">
-							<span class="underline">Michael Riedel ist Unterzeichner der Charta für nachhaltiges Design, initiiert von der AGD</span>
-							<img class="svg-arrow-link alt="Arrow" src="/static/img/svg/eg-arrow.svg"">
-						</a>
-					</p>
-				</div>
-				<img class="scroll-img --profil" alt="scroll Img" src="./static/img/profil/Regenwald_web2.jpg">
-			</div>
-			<div class="padding"></div>
+			<div w3-include-html="footer"></div>
 		</div>
-		<div class="scroll-controls">
-			<button class="arrow --left --arrow-non-active" onclick="setScrollPosition(this, -1)">
-				<img class="arrow-svg --left" alt="Arrow" src="/static/img/svg/eg-arrow.svg">
-			</button>
-			<button class="arrow --right" onclick="setScrollPosition(this, 1)">
-				<img class="arrow-svg" alt="Arrow" src="/static/img/svg/eg-arrow.svg">
-			</button>
-		</div>
-	</div>
-	<div class="container mt-50">
-		<h2 class="header-3 mb-20">Unsere Leistungen – konkret</h2>
-		<p class="mb-30">
-			Sie kommunizieren mit Kunden, Mitarbeitern und Öffentlichkeit. Und nutzen dafür z.B. Internet, Broschüren, Anzeigen, Displays, Verpackungen und Messen. In all diesen Bereichen unterstützen wir Sie professionell.
-		</p>
-		<p class="mb-30">
-			Unsere Arbeit beginnt, wenn Sie es wünschen, bereits bei der Positionierung Ihres Unternehmens bzw. Produktes oder mit der Entwicklung eines Kommunikationskonzeptes.
-		</p>
-		<p class="mb-30">
-			Eine zentrale Rolle spielt das (Corporate) Design, denn das visuelle Erscheinungsbild wird als Erstes wahrgenommen und prägt den Eindruck des Betrachters. Im Bereich Design profitieren Sie von unserer Kompetenz, die alle theoretischen und praktischen Aspekte umfasst.
-		</p>
-		<div class="profil-grid mt-80 mb-80">
-			<div class="profil-grid-box --konzepte">
-				<h3 class="header-3 mb-20">Werbe- und Kommunikationkonzepte</h3>
-				<ul class="mb-10">
-					<li>Beratung</li>
-					<li>Markenbildung, Markenpflege</li>
-					<li>Positionierung</li>
-					<li>Zielgruppen-Definition</li>
-					<li>Kommunikationsziele</li>
-				</ul>
-				<ul>
-					<li>Marketing-/Werbemaßnahmen</li>
-					<li>Produkteinführungen</li>
-					<li>Print, Web-Entwicklung</li>
-					<li>Corporate Design</li>
-					<li>Packaging, Produktausstattung</li>
-					<li>Werbemittel, Give-Aways</li>				
-				</ul>
-			</div>
-			<div class="profil-grid-box --design">
-				<h3 class="header-3 mb-20">Grafik-Design</h3>
-				<ul>
-					<li>Logos, Schriftzüge</li>
-					<li>Geschäftsausstattungen</li>
-					<li>(Visitenkarten, Briefschaften Gebäude- und Fahrzeugkennzeichnung)</li>
-					<li>Imagebroschüren</li>
-					<li>Verpackungsdesign</li>
-					<li>Prospekte, Flyer</li>
-					<li>Anzeigen</li>
-					<li>Banner, Plakate, Fahnen</li>	
-					<li>Webdesign</li>	
-					<li>Messedesign</li>	
-					<li>etc.</li>		
-				</ul>
-			</div>
-			<div class="profil-grid-box --foto">
-				<h3 class="header-3 mb-20">Fotografie</h3>
-				<ul>
-					<li>Produktfotografie</li>
-					<li>Reportagefotografie</li>
-					<li>Bildbearbeitung</li>
-					<li>Fotoretusche</li>
-					<li>Fotocomposing</li>
-				</ul>
-			</div>
-			<div class="profil-grid-box --produktion">
-				<h3 class="header-3 mb-20">Medienproduktion Steuerung/Koordination</h3>
-				<ul>
-					<li>Druck</li>
-					<li>Webprogrammierung</li>
-					<li>Messeauftritte</li>
-				</ul>
-			</div>
-		</div>
-	</div>
-	<div w3-include-html="footer.html"></div>
-</div>
-</body>
+	</body>
 </html>

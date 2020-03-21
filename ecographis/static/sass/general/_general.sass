@@ -12,6 +12,7 @@ body
 	overflow-x: hidden
 
 .container
+	position: relative
 	max-width: 1000px
 	width: 100%
 	padding-left: 30px
@@ -21,6 +22,8 @@ body
 	@media screen and (max-width: 450px)
 		padding-left: 20px
 		padding-right: 20px
+	&.margin
+		margin-top: 100px
 
 .introduction-text
 	font-size: 26px
@@ -77,3 +80,10 @@ body
 	filter: brightness(100%) contrast(100%)
 	&:hover
 		filter: brightness(80%) contrast(140%)
+
+.link
+	text-decoration: none
+	color: #237EC6
+	transition: color 0.3s
+	&:hover
+		color: #083759

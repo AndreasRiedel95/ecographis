@@ -4,30 +4,27 @@
 		transform: translate3d(+25%, 0, 0)
 	75% 
 		opacity: 0.5
-		transform: translate3d(0, 0, 0)
+		transform: translateZ(0)
 	100% 
 		opacity: 1
 
 
 @mixin fadeInLeftBanner()
-	0% 
-		opacity: 0
-		transform: translate3d(+20%, 0, 0)
-	10%
-		opacity: 1
-	75% 
-		transform: translate3d(0, 0, 0)
-	100% 
-		opacity: 1
+	0%
+		transform: translate3d(50%, 0, 0)
+	to
+		transform: translateZ(0)
+		visibility: visible
+		
 
 
 @mixin fadeIn()
 	0% 
 		opacity: 0
-		transform: translateY(75%)
+		transform: translate3d(0, 75%, 0)
 	75% 
 		opacity: 0.5
-		transform: translateY(0)
+		transform: translateZ(0)
 	100% 
 		opacity: 1
 
@@ -36,6 +33,6 @@
 		opacity: 1
 	75% 
 		opacity: 0.5
-		transform: translateY(0)
+		transform: translateZ(0)
 	100% 
 		opacity: 0

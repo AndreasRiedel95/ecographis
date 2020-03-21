@@ -32,7 +32,6 @@
 	color: #fff
 	&:hover > .svg-arrow-link
 		filter:  saturate(1) 
-		color: 
 	&:hover > .underline
 		background-size: 100% 100%
 
@@ -72,3 +71,64 @@
 		grid-row: 2 / span 1
 		@media screen and (max-width: 1000px)
 			grid-row: auto
+
+.inner-container
+	width: 100%
+	height: auto
+	transform: translateX(0)
+	opacity: 1
+	transition: transform 0.3s ease-in
+	&.m--hidden
+		opacity: 0
+		height: 0
+		transform: translateX(120%)
+
+.controll-wrapper
+	display: flex
+	align-items: center
+
+.next-headline
+	padding-bottom: 3px
+
+.button-headline-wrapper
+	cursor: pointer
+	display: flex
+	align-items: center
+	margin-right: auto
+	&:hover > .underline
+		background-size: 100% 100%
+	&:hover > .arrow-inner-container > .arrow-svg-inner-container
+		filter: brightness(80%) contrast(140%)
+
+.arrow-inner-container
+	position: relative
+	height: 20px
+	border: 0
+	padding: 0
+	margin: 0
+	outline: none
+	background-color: transparent
+	cursor: pointer
+	opacity: 1
+	display: flex
+	align-items: center
+	pointer-events: all
+	margin-right: 10px
+
+.arrow-svg-inner-container
+	height: 20px
+
+.page-counter-wrapper
+	& > span 
+		font-size: 13px
+
+.inner-container__ul-list
+	list-style: disc !important
+	margin-top: 10px
+	padding-left: 30px
+
+.inner-container__grid-wrapper
+	display: grid
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))
+	grid-column-gap: 40px
+	grid-row-gap: 20px
