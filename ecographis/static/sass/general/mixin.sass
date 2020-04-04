@@ -11,13 +11,13 @@
 
 @mixin fadeInLeftBanner()
 	0%
+		visibility: collapse
 		transform: translate3d(50%, 0, 0)
-	to
-		transform: translateZ(0)
+	100%
 		visibility: visible
+		transform: translateZ(0)
+		opacity: 100%
 		
-
-
 @mixin fadeIn()
 	0% 
 		opacity: 0

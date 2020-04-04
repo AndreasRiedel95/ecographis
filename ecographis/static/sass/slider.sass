@@ -4,20 +4,19 @@
 	animation: fadeInLeftBanner 0.8s
 	animation-timing-function: cubic-bezier(.32,.01,.36,.98) 
 	animation-fill-mode: forwards
-	visibility: hidden
 @keyframes fadeInLeftBanner
 	@include fadeInLeftBanner
 
 .scroll-controll-wrapper
 	position: relative
+	visibility: collapse
+	transform: translate3d(50%, 0, 0)
 	max-width: 100vw
 	margin-right: auto
 	margin-left: auto
-	overflow-y: hidden
 	scroll-behavior: smooth
 	height: 450px
 	overflow: hidden
-	visibility: hidden
 	&.--profil
 		height: 400px
 	@media all and (hover: hover) and (min-width: 850px)
