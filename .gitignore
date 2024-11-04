@@ -1,2 +1,4 @@
 # Add any directories, files, or patterns you don't want to be tracked by version control
-ecographis/prepros-6.config
+.DS_Store
+node_modules
+./ecographis/prepros.config
