@@ -1,114 +1,179 @@
 <!DOCTYPE html>
 <html lang="de">
-<head>
-  <meta charset="UTF-8">
-  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no" name="viewport">
-  <title>ecographis</title>
-  	<script defer src="static/production/js/includeHTML.js"></script>
-	<script defer src="static/production/js/intersection-observer.js"></script>
-	<script defer src="static/production/js/scroll-behaviour.js"></script>
-	<script defer src="static/production/js/animation.js"></script>
-	<script defer src="static/production/js/scroll.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no"
+      name="viewport"
+    />
+    <title>ecographis</title>
+    <script defer src="static/production/js/includeHTML.js"></script>
+    <script defer src="static/production/js/intersection-observer.js"></script>
+    <script defer src="static/production/js/scroll-behaviour.js"></script>
+    <script defer src="static/production/js/animation.js"></script>
+    <script defer src="static/production/js/scroll.js"></script>
 
-	<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,500,500i" rel="preconnect" crossorigin>
-	<link rel="stylesheet" href="static/production/css/reset.css">
-	<link rel="stylesheet" href="static/production/css/base.css">
-	<link rel="stylesheet" href="static/production/css/navigation.css">
-	<link rel="stylesheet" href="static/production/css/slider.css">
-	<link rel="stylesheet" href="static/production/css/profil.css">
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,500,500i"
+      rel="preconnect"
+      crossorigin
+    />
+    <link rel="stylesheet" href="static/production/css/reset.css" />
+    <link rel="stylesheet" href="static/production/css/base.css" />
+    <link rel="stylesheet" href="static/production/css/navigation.css" />
+    <link rel="stylesheet" href="static/production/css/slider.css" />
+    <link rel="stylesheet" href="static/production/css/profil.css" />
 
-	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
-	<link rel="manifest" href="/favicon/site.webmanifest">
-	<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
-	<meta name="msapplication-TileColor" content="#da532c">
-	<meta name="theme-color" content="#ffffff">
-</head>
-<body>
-	<div class="nav-wrapper-fixed">
-		<div class="nav-bar">
-			<a class="logo-link" href="/">
-				<img class="logo" alt="Ecographis Logo" src="/static/img/svg/eg-logo.svg" />
-			</a>
-			<div class="nav-element">
-				<input type="checkbox" id="change-hamburger" onclick="menuAnimation()" />
-				<label for="change-hamburger" class="overlay_label"></label>
-				<label for="change-hamburger" class="hamburger">
-					<span></span>
-					<div class="nav-ele-padding"></div>
-				</label>
-			</div>
-		</div>
-		<div class="menu" style="transform: translate3d(0, -150%, 0);">
-			<div class="nav-grid">
-				<img class="logo-wort-bild" src="/static/img/svg/eg-logo-wort-bild.svg" />
-				<div class="menu-content">
-					<a class="nav-ele" href="/">
-						<div class="nav-ele-pseudo">Home</div>
-					</a>
-					<a class="nav-ele" href="/profil">
-						<div class="nav-ele-pseudo">Profil</div>
-					</a>
-				</div>
-				<div class="menu-contact">
-					<ul class="menu-contact-wrapper">
-						<li class="menu-contact_context">
-							ecographis <span class=" menu-contact_context no-wrap">kommunikation + design</span>
-						</li>
-						<li class="menu-contact_context">Michael Riedel, Dipl. Designer (FH)</li>
-						<li class="menu-contact_context">
-							Conrad-Röntgen Str. 23<br />
-							74321 Bietigheim-Bissingen
-						</li>
-						<li class="menu-contact_context mt-10">
-							<a href="tel:07141-6437851">07141-6437851</a>
-						</li>
-						<li class="menu-contact_context">
-							<a href="mailto:info@ecographis.com">info@ecographis.com</a>
-						</li>
-						<li class="menu-contact_context mt-10">
-							<a class='black underline' target='_blank' href="/static/assets/AVG_ecographis.pdf">Allgemeine Vertragsgrundlagen</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="container margin">
-		<div class="impressum-container mb-100">
-			<div class="impressum">
-				<p class="mb-20">
-					eco<span class="bold">graphis</span> kommunikation + design <br> Michael Riedel, Dipl. Designer (FH)
-				</p>
-				<p class="mb-20">
-					Conrad-Röntgen Str. 23 <br> 74321 Bietigheim-Bissingen
-				</p>
-				<ul class="mb-20">
-					<li><span class="bold">Telefon:</span> 07141-6437851</li>
-					<li>
-						<span class="bold">E-Mail:</span> <a href="mailto:m.riedel@ecographis.com"> m.riedel@ecographis.com</a>
-					</li>
-				</ul>
-				<p class="mb-20">Ust-IdNr. DE272408322</p>
-				<h3 class="header-3">Verantwortlich für den Inhalt:</h3>
-				<p class="mb-20">Michael Riedel</p>
-				<h3 class="header-3">Allgemeine Vertragsgrundlagen:</h3>
-				<p class="mb-20">
-					Für alle Leistungen gelten die Allgemeinen Vertragsgrundlagen (AVG), die Sie hier einsehen können: <a target="_blank" href="static/assets/AVG_ecographis.pdf">AVG_ecographis.pdf</a>
-				</p>
-			</div>
-			<div class="urheberrecht">
-				<h3 class="header-3 mb-20">Urheber- und Kennzeichenrecht</h3>
-				<p class="mb-20">
-					Texte, Bilder, Grafiken sowie Gestaltung und Layout dieser Seiten unterliegen dem Urheberrecht. Auch die Rechte an den von ecographis kommunikation + design selbst erstellten und veröffentlichten Texte bleiben allein bei ecographis. Eine Vervielfältigung oder Verwendung der genannten Texte, Bilder, Grafiken und Publikationen in anderen elektronischen oder gedruckten Publikationen ist ohne ausdrückliche Zustimmung von ecographis kommunikation + design nicht gestattet. Ihre unerlaubte Verwendung, Reproduktion oder Weitergabe wird sowohl straf- als auch zivilrechtlich verfolgt.
-				</p>
-				<p class="mb-20">
-					Alle innerhalb des Internetangebotes genannten Marken- und sonstigen Kennzeichen sind gemäß den Bestimmungen des Kennzeichenrechts geschützt und stehen im Eigentum des jeweiligen Rechteinhabers.
-				</p>
-			</div>
-		</div>
-	</div>
-	<div w3-include-html="footer.html"></div>
-</body>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="/favicon/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+  </head>
+  <body>
+    <div class="nav-wrapper-fixed">
+      <div class="nav-bar">
+        <a class="logo-link" href="/">
+          <img
+            class="logo"
+            alt="Ecographis Logo"
+            src="/static/img/svg/eg-logo.svg"
+          />
+        </a>
+        <div class="nav-element">
+          <input
+            type="checkbox"
+            id="change-hamburger"
+            onclick="menuAnimation()"
+          />
+          <label for="change-hamburger" class="overlay_label"></label>
+          <label for="change-hamburger" class="hamburger">
+            <span></span>
+            <div class="nav-ele-padding"></div>
+          </label>
+        </div>
+      </div>
+      <div class="menu" style="transform: translate3d(0, -150%, 0)">
+        <div class="nav-grid">
+          <img
+            class="logo-wort-bild"
+            src="/static/img/svg/eg-logo-wort-bild.svg"
+          />
+          <div class="menu-content">
+            <a class="nav-ele" href="/">
+              <div class="nav-ele-pseudo">Home</div>
+            </a>
+            <a class="nav-ele" href="/profil">
+              <div class="nav-ele-pseudo">Profil</div>
+            </a>
+          </div>
+          <div class="menu-contact">
+            <ul class="menu-contact-wrapper">
+              <li class="menu-contact_context">
+                ecographis
+                <span class="menu-contact_context no-wrap"
+                  >kommunikation + design</span
+                >
+              </li>
+              <li class="menu-contact_context">
+                Michael Riedel, Dipl. Designer (FH)
+              </li>
+              <li class="menu-contact_context">
+                Conrad-Röntgen Str. 23<br />
+                74321 Bietigheim-Bissingen
+              </li>
+              <li class="menu-contact_context mt-10">
+                <a href="tel:0171 6848178">0171 6848178</a>
+              </li>
+              <li class="menu-contact_context">
+                <a href="mailto:info@ecographis.com">info@ecographis.com</a>
+              </li>
+              <li class="menu-contact_context mt-10">
+                <a
+                  class="black underline"
+                  target="_blank"
+                  href="/static/assets/AVG_ecographis.pdf"
+                  >Allgemeine Vertragsgrundlagen</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container margin">
+      <div class="impressum-container mb-100">
+        <div class="impressum">
+          <p class="mb-20">
+            eco<span class="bold">graphis</span> kommunikation + design <br />
+            Michael Riedel, Dipl. Designer (FH)
+          </p>
+          <p class="mb-20">
+            Conrad-Röntgen Str. 23 <br />
+            74321 Bietigheim-Bissingen
+          </p>
+          <ul class="mb-20">
+            <li><span class="bold">Telefon:</span> 0171 6848178</li>
+            <li>
+              <span class="bold">E-Mail:</span>
+              <a href="mailto:m.riedel@ecographis.com">
+                m.riedel@ecographis.com</a
+              >
+            </li>
+          </ul>
+          <p class="mb-20">Ust-IdNr. DE272408322</p>
+          <h3 class="header-3">Verantwortlich für den Inhalt:</h3>
+          <p class="mb-20">Michael Riedel</p>
+          <h3 class="header-3">Allgemeine Vertragsgrundlagen:</h3>
+          <p class="mb-20">
+            Für alle Leistungen gelten die Allgemeinen Vertragsgrundlagen (AVG),
+            die Sie hier einsehen können:
+            <a target="_blank" href="static/assets/AVG_ecographis.pdf"
+              >AVG_ecographis.pdf</a
+            >
+          </p>
+        </div>
+        <div class="urheberrecht">
+          <h3 class="header-3 mb-20">Urheber- und Kennzeichenrecht</h3>
+          <p class="mb-20">
+            Texte, Bilder, Grafiken sowie Gestaltung und Layout dieser Seiten
+            unterliegen dem Urheberrecht. Auch die Rechte an den von ecographis
+            kommunikation + design selbst erstellten und veröffentlichten Texte
+            bleiben allein bei ecographis. Eine Vervielfältigung oder Verwendung
+            der genannten Texte, Bilder, Grafiken und Publikationen in anderen
+            elektronischen oder gedruckten Publikationen ist ohne ausdrückliche
+            Zustimmung von ecographis kommunikation + design nicht gestattet.
+            Ihre unerlaubte Verwendung, Reproduktion oder Weitergabe wird sowohl
+            straf- als auch zivilrechtlich verfolgt.
+          </p>
+          <p class="mb-20">
+            Alle innerhalb des Internetangebotes genannten Marken- und sonstigen
+            Kennzeichen sind gemäß den Bestimmungen des Kennzeichenrechts
+            geschützt und stehen im Eigentum des jeweiligen Rechteinhabers.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div w3-include-html="footer.html"></div>
+  </body>
 </html>

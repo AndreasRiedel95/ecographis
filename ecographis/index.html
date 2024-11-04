@@ -1,349 +1,546 @@
 <!DOCTYPE html>
 <html lang="de">
-	<head>
-		<meta charset="UTF-8" />
-		<meta
-			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no"
-			name="viewport"
-		/>
-		<title>ecographis kommunikation + design</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no"
+      name="viewport"
+    />
+    <title>ecographis kommunikation + design</title>
 
-		<link
-			href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,500,500i"
-			rel="preconnect"
-			crossorigin
-		/>
-		<link rel="stylesheet" href="static/production/css/reset.css" />
-		<link rel="stylesheet" href="static/production/css/navigation.css" />
-		<link rel="stylesheet" href="static/production/css/base.css" />
-		<link rel="stylesheet" href="static/production/css/slider.css" />
-		<link rel="stylesheet" href="static/production/css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,500,500i"
+      rel="preconnect"
+      crossorigin
+    />
+    <link rel="stylesheet" href="static/production/css/reset.css" />
+    <link rel="stylesheet" href="static/production/css/navigation.css" />
+    <link rel="stylesheet" href="static/production/css/base.css" />
+    <link rel="stylesheet" href="static/production/css/slider.css" />
+    <link rel="stylesheet" href="static/production/css/style.css" />
 
-		<script src="static/production/js/includeHTML.js" defer></script>
-		<script src="static/production/js/intersection-observer.js" defer></script>
-		<script src="static/production/js/scroll-behaviour-dist.js" defer></script>
-		<script src="static/production/js/animation.js" async></script>
-		<script src="static/production/js/scroll.js" defer></script>
+    <script src="static/production/js/includeHTML.js" defer></script>
+    <script src="static/production/js/intersection-observer.js" defer></script>
+    <script src="static/production/js/scroll-behaviour-dist.js" defer></script>
+    <script src="static/production/js/animation.js" async></script>
+    <script src="static/production/js/scroll.js" defer></script>
 
-		<!-- Favicon  -->
-		<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" rel="preconnect" />
-		<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" rel="preconnect" />
-		<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" rel="preconnect" />
-		<link rel="manifest" href="/favicon/site.webmanifest" rel="preconnect" />
-		<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5" />
-		<meta name="msapplication-TileColor" content="#da532c" />
-		<meta name="theme-color" content="#ffffff" />
-	</head>
-	<body>
-		<div class="nav-wrapper-fixed">
-			<div class="nav-bar">
-				<a class="logo-link" href="/">
-					<img class="logo" alt="Ecographis Logo" src="/static/img/svg/eg-logo.svg" />
-				</a>
-				<div class="nav-element">
-					<input type="checkbox" id="change-hamburger" onclick="menuAnimation()" />
-					<label for="change-hamburger" class="overlay_label"></label>
-					<label for="change-hamburger" class="hamburger">
-						<span></span>
-						<div class="nav-ele-padding"></div>
-					</label>
-				</div>
-			</div>
-			<div class="menu" style="transform: translate3d(0, -150%, 0);">
-				<div class="nav-grid">
-					<img class="logo-wort-bild" src="/static/img/svg/eg-logo-wort-bild.svg" />
-					<div class="menu-content">
-						<a class="nav-ele" href="/">
-							<div class="nav-ele-pseudo">Home</div>
-						</a>
-						<a class="nav-ele" href="/profil.html">
-							<div class="nav-ele-pseudo">Profil</div>
-						</a>
-					</div>
-					<div class="menu-contact">
-						<ul class="menu-contact-wrapper">
-							<li class="menu-contact_context">
-								ecographis <span class=" menu-contact_context no-wrap">kommunikation + design</span>
-							</li>
-							<li class="menu-contact_context">Michael Riedel, Dipl. Designer (FH)</li>
-							<li class="menu-contact_context">
-								Conrad-Röntgen Str. 23<br />
-								74321 Bietigheim-Bissingen
-							</li>
-							<li class="menu-contact_context mt-10">
-								<a href="tel:07141-6437851">07141-6437851</a>
-							</li>
-							<li class="menu-contact_context">
-								<a href="mailto:info@ecographis.com">info@ecographis.com</a>
-                            </li>
-                            <li class="menu-contact_context mt-10">
-								<a class='black underline' target='_blank' href="/static/assets/AVG_ecographis.pdf">Allgemeine Vertragsgrundlagen</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="container margin">
-			<h2 class="header-2">ecographis kommunikation + design</h2>
-			<p class="introduction-text">
-				Wir entwickeln Konzepte für Ihre Unternehmens- und Marketingkommunikation und setzen diese professionell
-				um.
-			</p>
-		</div>
-		<div class="scroll-controll-wrapper  mt-50 observer">
-			<div class="scroll-box-wrapper scroll-box-wrapper-js --snap" data-dragstart="0" data-scrollstart="0">
-				<div class="padding"></div>
-				<div class="scroll-box scroll-box-js active">
-					<img class="scroll-img" alt="scroll Img" src="./static/img/Holzmedia_Elements_Titel_b.jpg" />
-				</div>
-				<div class="scroll-box scroll-box-js">
-					<img class="scroll-img" alt="scroll Img" src="./static/img/Hm-Elements_Konz-Folder_2-3_b.jpg" />
-				</div>
-				<div class="scroll-box scroll-box-js">
-					<img class="scroll-img" alt="scroll Img" src="./static/img/Hm-Elements_Konz-Folder_Klappen_b.jpg" />
-				</div>
-				<div class="scroll-box scroll-box-js">
-					<img class="scroll-img" alt="scroll Img" src="./static/img/Hm-Elements_Konz-Folder_4-5_b.jpg" />
-				</div>
-				<div class="padding"></div>
-			</div>
-			<div class="scroll-controls">
-				<button class="arrow --left --arrow-non-active" onclick="setScrollPosition(this, -1)">
-					<img class="arrow-svg --left" alt="Arrow" src="/static/img/svg/eg-arrow.svg" />
-				</button>
-				<button class="arrow --right" onclick="setScrollPosition(this, 1)">
-					<img class="arrow-svg" alt="Arrow" src="/static/img/svg/eg-arrow.svg" />
-				</button>
-			</div>
-			<div class="scroll-overlay">
-				<div class="scroll-overlay-content">
-					<span>Holzmedia Medienmöbel</span><br />
-					<p class="mt-30">Holzmedia Elements:</p>
-					<p>
-						Naming, Kommunikations- und Designkonzept, Broschüren, Messedesign etc.
-					</p>
-				</div>
-			</div>
-		</div>
-		<div class="scroll-overlay">
-			<div class="scroll-overlay-content">
-				<span>Holzmedia Medienmöbel</span><br />
-				<p>Holzmedia Elements:</p>
-				<p>
-					Naming, Kommunikations- und Designkonzept, Broschüren, Messedesign etc.
-				</p>
-			</div>
-		</div>
-		<div class="scroll-controll-wrapper  mt-50 observer">
-			<div class="scroll-box-wrapper scroll-box-wrapper-js" data-scrollstart="0">
-				<div class="padding"></div>
-				<div class="scroll-box scroll-box-js active">
-					<img class="scroll-img" alt="scroll Img" src="./static/img/Mara_Umweltbericht_13_b.jpg" />
-				</div>
-				<div class="scroll-box scroll-box-js">
-					<img class="scroll-img" alt="scroll Img" src="./static/img/Mara_Umweltkompakt_b.jpg" />
-				</div>
-				<div class="scroll-box scroll-box-js">
-					<img class="scroll-img" alt="scroll Img" src="./static/img/Marabu_UB_Titel_Einleger_b.jpg" />
-				</div>
-				<div class="padding"></div>
-			</div>
-			<div class="scroll-controls">
-				<button class="arrow --left --arrow-non-active" onclick="setScrollPosition(this, -1)">
-					<img class="arrow-svg --left" alt="Arrow" src="/static/img/svg/eg-arrow.svg" />
-				</button>
-				<button class="arrow --right" onclick="setScrollPosition(this, 1)">
-					<img class="arrow-svg" alt="Arrow" src="/static/img/svg/eg-arrow.svg" />
-				</button>
-			</div>
-			<div class="scroll-overlay">
-				<div class="scroll-overlay-content">
-					<span>Marabu Farben</span><br />
-					<p class="mt-30">Umweltberichte 2010 - 2017:</p>
-					<p>Konzept und Design</p>
-				</div>
-			</div>
-		</div>
-		<div class="scroll-overlay">
-			<div class="scroll-overlay-content">
-				<span>Marabu Farben</span><br />
-				<p>Umweltberichte 2010 - 2017:</p>
-				<p>Konzept und Design</p>
-			</div>
-		</div>
-		<div class="scroll-controll-wrapper  mt-50 observer">
-			<div class="scroll-box-wrapper scroll-box-wrapper-js" data-scrollstart="0">
-				<div class="padding"></div>
-				<div class="scroll-box scroll-box-js active">
-					<img class="scroll-img" alt="scroll Img" src="./static/img/Woerner-Website_b.jpg" />
-				</div>
-				<div class="scroll-box scroll-box-js">
-					<img class="scroll-img" alt="scroll Img" src="./static/img/Woerner_CD-Bspl_b.jpg" />
-				</div>
-				<div class="scroll-box scroll-box-js">
-					<img class="scroll-img" alt="scroll Img" src="./static/img/Woerner-Brosch_Pitstop-2_b.jpg" />
-				</div>
-				<div class="scroll-box scroll-box-js">
-					<img class="scroll-img" alt="scroll Img" src="./static/img/Woerner-Brosch_Titel_b.jpg" />
-				</div>
-				<div class="padding"></div>
-			</div>
-			<div class="scroll-controls">
-				<button class="arrow --left --arrow-non-active" onclick="setScrollPosition(this, -1)">
-					<img class="arrow-svg --left" alt="Arrow" src="/static/img/svg/eg-arrow.svg" />
-				</button>
-				<button class="arrow --right" onclick="setScrollPosition(this, 1)">
-					<img class="arrow-svg" alt="Arrow" src="/static/img/svg/eg-arrow.svg" />
-				</button>
-			</div>
-			<div class="scroll-overlay">
-				<div class="scroll-overlay-content">
-					<span>Wörner Automatisierung</span><br />
-					<p class="mt-30">Corporate Identity:</p>
-					<p>Positionierung,</p>
-					<p>Corporate Design.</p>
-					<p class="mt-20">Website, Broschüren, Messedesign etc.:</p>
-					<p>Konzept und Design, Fotografie und Illustration.</p>
-				</div>
-			</div>
-		</div>
-		<div class="scroll-overlay">
-			<div class="scroll-overlay-content">
-				<span>Wörner Automatisierung</span><br />
-				<p>Corporate Identity:</p>
-				<p>Positionierung,Corporate Design.</p>
-				<p class="mt-20">Website, Broschüren etc.:</p>
-				<p>Konzept und Design, Fotografie und Illustration.</p>
-			</div>
-		</div>
-		<div class="container mb-100 mt-100">
-			<p class="introduction-text">
-				<strong
-					>Mit uns als Partner erhält Ihre Marke ein modernes Image und Design, das überzeugt und auch
-					zukünftig Bestand hat.
-				</strong>
-				Denn wir achten auf Relevanz und Wirksamkeit der kommunikativen Inhalte sowie auf Authentizität Ihres
-				visuellen Auftrittes.
-				<a class="button-headline-wrapper" href="/profil.html">
-					<span class="inner-button-wrapper">
-						<button class="arrow-inner-container">
-							<img class="arrow-svg-inner-container" alt="Arrow" src="/static/img/svg/eg-arrow.svg" />
-						</button>
-						<span class="next-headline underline">Profil</span>
-					</span>
-				</a>
-			</p>
-		</div>
-		<div class="projects-grid mb-100">
-			<div class="project-container">
-				<img class="grid-img" alt="grid Img" src="./static/img/LEA-Website_b.jpg" />
-				<div class="grid-overlay">
-					<div class="gird-overlay-content">
-						<span>Ludwigsburger Energieagentur</span>
-						<p class="mt-10">Website:</p>
-						<p>Konzeption, Design, Umsetzung</p>
-						<p class="mt-10">Logo Redesign</p>
-					</div>
-				</div>
-			</div>
-			<div class="project-container">
-				<img class="grid-img" alt="grid Img" src="./static/img/Flow_SWLB_RemseckEnergie_b.jpg" />
-				<div class="grid-overlay">
-					<div class="gird-overlay-content">
-						<span>Stadtwerke Ludwigsburg Kornwestheim</span>
-						<p class="mt-10">Markteinführung REMSECKENERGIE:</p>
-						<p>Corporate Design, Geschäftsausstattung, Webdesign, Werbekampagne etc.</p>
-					</div>
-				</div>
-			</div>
-			<div class="project-container">
-				<img class="grid-img" alt="grid Img" src="./static/img/MZ-Logo_Visitenk_16_b.jpg" />
-				<div class="grid-overlay">
-					<div class="gird-overlay-content">
-						<span>Müller Ziegler Architekten</span>
-						<p class="mt-10">Corporate Design, Logo, Geschäftsausstattung, Anzeigen</p>
-					</div>
-				</div>
-			</div>
-			<div class="project-container">
-				<img class="grid-img" alt="grid Img" src="./static/img/SWLB_Plakat_14_b.jpg" />
-				<div class="grid-overlay">
-					<div class="gird-overlay-content">
-						<span>Stadtwerke Ludwigsburg Kornwestheim</span>
-						<p class="mt-10">Markteinführung SWLB FAVORITENERGIEplus:</p>
-						<p>Kommunikationskonzept, Produktbroschüre, Anzeigen, etc.</p>
-					</div>
-				</div>
-			</div>
-			<div class="project-container">
-				<img class="grid-img" alt="grid Img" src="./static/img/Moll-Kinder_b.jpg" />
-				<div class="grid-overlay">
-					<div class="gird-overlay-content">
-						<span>moll Funktionsmöbel</span>
-						<p class="mt-10">Gesundes Lernen:</p>
-						<p>Katalogintegration, Broschüre</p>
-					</div>
-				</div>
-			</div>
-			<div class="project-container">
-				<img class="grid-img" alt="grid Img" src="./static/img/Kubota_Anzeige_Radlader_b.jpg" />
-				<div class="grid-overlay">
-					<div class="gird-overlay-content">
-						<span>Kubota Baumaschinen</span>
-						<p class="mt-10">Markteinführung Radlader:</p>
-						<p>Kommunikationskonzept, Anzeigenkampagne, Produktübersicht, Messeauftritt etc.</p>
-					</div>
-				</div>
-			</div>
-			<div class="project-container">
-				<img class="grid-img" alt="grid Img" src="./static/img/Holzmedia_Highlights_b.jpg" />
-				<div class="grid-overlay">
-					<div class="gird-overlay-content">
-						<span>Holzmedia Medienmöbel</span>
-						<p class="mt-10">„Highlights“:</p>
-						<p>Referenzbroschüre</p>
-					</div>
-				</div>
-			</div>
-			<div class="project-container">
-				<img class="grid-img" alt="grid Img" src="./static/img/HERMA-Recycl-SF-Titel_b.jpg" />
-				<div class="grid-overlay">
-					<div class="gird-overlay-content">
-						<span>HERMA Etiketten</span>
-						<p class="mt-10">Markteinführung Recycling-Etiketten:</p>
-						<p>Kommunikationskonzept, Produktbroschüre, Anzeigen, Pop-Up-Display etc.</p>
-					</div>
-				</div>
-			</div>
-			<div class="project-container">
-				<img class="grid-img" alt="grid Img" src="./static/img/Moll_Scooter_b.jpg" />
-				<div class="grid-overlay">
-					<div class="gird-overlay-content">
-						<span>moll Funktionsmöbel</span>
-						<p class="mt-10">
-							Markteinführung diverser Tisch- und Stuhlsysteme für den Schülerarbeitsplatz:
-						</p>
-						<p>Designkonzept, Sales- und Endverbraucherbroschüren etc.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="container mb-100">
-			<p class="introduction-text">
-				Viele Leute denken Wirtschaftlichkeit oder Nachhaltigkeit. Warum eigentlich oder?
-				<strong>Ökologisch und sozial verantwortliches Handeln ist heute unverzichtbar</strong> – und wenn dies
-				glaubwürdig kommuniziert wird, ein nicht zu unterschätzender Wettbewerbsvorteil.
-				<a class="button-headline-wrapper" href="/profil.html?p=nachhaltige-kommunikation">
-					<span class="inner-button-wrapper">
-						<button class="arrow-inner-container">
-							<img class="arrow-svg-inner-container" alt="Arrow" src="/static/img/svg/eg-arrow.svg" />
-						</button>
-						<span class="next-headline underline">Nachhaltige Kommunikation</span>
-					</span>
-				</a>
-			</p>
-		</div>
-		<div w3-include-html="footer.html"></div>
-	</body>
+    <!-- Favicon  -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/favicon/apple-touch-icon.png"
+      rel="preconnect"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicon/favicon-32x32.png"
+      rel="preconnect"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicon/favicon-16x16.png"
+      rel="preconnect"
+    />
+    <link rel="manifest" href="/favicon/site.webmanifest" rel="preconnect" />
+    <link
+      rel="mask-icon"
+      href="/favicon/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+  </head>
+  <body>
+    <div class="nav-wrapper-fixed">
+      <div class="nav-bar">
+        <a class="logo-link" href="/">
+          <img
+            class="logo"
+            alt="Ecographis Logo"
+            src="/static/img/svg/eg-logo.svg"
+          />
+        </a>
+        <div class="nav-element">
+          <input
+            type="checkbox"
+            id="change-hamburger"
+            onclick="menuAnimation()"
+          />
+          <label for="change-hamburger" class="overlay_label"></label>
+          <label for="change-hamburger" class="hamburger">
+            <span></span>
+            <div class="nav-ele-padding"></div>
+          </label>
+        </div>
+      </div>
+      <div class="menu" style="transform: translate3d(0, -150%, 0)">
+        <div class="nav-grid">
+          <img
+            class="logo-wort-bild"
+            src="/static/img/svg/eg-logo-wort-bild.svg"
+          />
+          <div class="menu-content">
+            <a class="nav-ele" href="/">
+              <div class="nav-ele-pseudo">Home</div>
+            </a>
+            <a class="nav-ele" href="/profil.html">
+              <div class="nav-ele-pseudo">Profil</div>
+            </a>
+          </div>
+          <div class="menu-contact">
+            <ul class="menu-contact-wrapper">
+              <li class="menu-contact_context">
+                ecographis
+                <span class="menu-contact_context no-wrap"
+                  >kommunikation + design</span
+                >
+              </li>
+              <li class="menu-contact_context">
+                Michael Riedel, Dipl. Designer (FH)
+              </li>
+              <li class="menu-contact_context">
+                Conrad-Röntgen Str. 23<br />
+                74321 Bietigheim-Bissingen
+              </li>
+              <li class="menu-contact_context mt-10">
+                <a href="tel:0171 6848178">0171 6848178</a>
+              </li>
+              <li class="menu-contact_context">
+                <a href="mailto:info@ecographis.com">info@ecographis.com</a>
+              </li>
+              <li class="menu-contact_context mt-10">
+                <a
+                  class="black underline"
+                  target="_blank"
+                  href="/static/assets/AVG_ecographis.pdf"
+                  >Allgemeine Vertragsgrundlagen</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container margin">
+      <h2 class="header-2">ecographis kommunikation + design</h2>
+      <p class="introduction-text">
+        Wir entwickeln Konzepte für Ihre Unternehmens- und
+        Marketingkommunikation und setzen diese professionell um.
+      </p>
+    </div>
+    <div class="scroll-controll-wrapper mt-50 observer">
+      <div
+        class="scroll-box-wrapper scroll-box-wrapper-js --snap"
+        data-dragstart="0"
+        data-scrollstart="0"
+      >
+        <div class="padding"></div>
+        <div class="scroll-box scroll-box-js active">
+          <img
+            class="scroll-img"
+            alt="scroll Img"
+            src="./static/img/Holzmedia_Elements_Titel_b.jpg"
+          />
+        </div>
+        <div class="scroll-box scroll-box-js">
+          <img
+            class="scroll-img"
+            alt="scroll Img"
+            src="./static/img/Hm-Elements_Konz-Folder_2-3_b.jpg"
+          />
+        </div>
+        <div class="scroll-box scroll-box-js">
+          <img
+            class="scroll-img"
+            alt="scroll Img"
+            src="./static/img/Hm-Elements_Konz-Folder_Klappen_b.jpg"
+          />
+        </div>
+        <div class="scroll-box scroll-box-js">
+          <img
+            class="scroll-img"
+            alt="scroll Img"
+            src="./static/img/Hm-Elements_Konz-Folder_4-5_b.jpg"
+          />
+        </div>
+        <div class="padding"></div>
+      </div>
+      <div class="scroll-controls">
+        <button
+          class="arrow --left --arrow-non-active"
+          onclick="setScrollPosition(this, -1)"
+        >
+          <img
+            class="arrow-svg --left"
+            alt="Arrow"
+            src="/static/img/svg/eg-arrow.svg"
+          />
+        </button>
+        <button class="arrow --right" onclick="setScrollPosition(this, 1)">
+          <img
+            class="arrow-svg"
+            alt="Arrow"
+            src="/static/img/svg/eg-arrow.svg"
+          />
+        </button>
+      </div>
+      <div class="scroll-overlay">
+        <div class="scroll-overlay-content">
+          <span>Holzmedia Medienmöbel</span><br />
+          <p class="mt-30">Holzmedia Elements:</p>
+          <p>
+            Naming, Kommunikations- und Designkonzept, Broschüren, Messedesign
+            etc.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-overlay">
+      <div class="scroll-overlay-content">
+        <span>Holzmedia Medienmöbel</span><br />
+        <p>Holzmedia Elements:</p>
+        <p>
+          Naming, Kommunikations- und Designkonzept, Broschüren, Messedesign
+          etc.
+        </p>
+      </div>
+    </div>
+    <div class="scroll-controll-wrapper mt-50 observer">
+      <div
+        class="scroll-box-wrapper scroll-box-wrapper-js"
+        data-scrollstart="0"
+      >
+        <div class="padding"></div>
+        <div class="scroll-box scroll-box-js active">
+          <img
+            class="scroll-img"
+            alt="scroll Img"
+            src="./static/img/Mara_Umweltbericht_13_b.jpg"
+          />
+        </div>
+        <div class="scroll-box scroll-box-js">
+          <img
+            class="scroll-img"
+            alt="scroll Img"
+            src="./static/img/Mara_Umweltkompakt_b.jpg"
+          />
+        </div>
+        <div class="scroll-box scroll-box-js">
+          <img
+            class="scroll-img"
+            alt="scroll Img"
+            src="./static/img/Marabu_UB_Titel_Einleger_b.jpg"
+          />
+        </div>
+        <div class="padding"></div>
+      </div>
+      <div class="scroll-controls">
+        <button
+          class="arrow --left --arrow-non-active"
+          onclick="setScrollPosition(this, -1)"
+        >
+          <img
+            class="arrow-svg --left"
+            alt="Arrow"
+            src="/static/img/svg/eg-arrow.svg"
+          />
+        </button>
+        <button class="arrow --right" onclick="setScrollPosition(this, 1)">
+          <img
+            class="arrow-svg"
+            alt="Arrow"
+            src="/static/img/svg/eg-arrow.svg"
+          />
+        </button>
+      </div>
+      <div class="scroll-overlay">
+        <div class="scroll-overlay-content">
+          <span>Marabu Farben</span><br />
+          <p class="mt-30">Umweltberichte 2010 - 2017:</p>
+          <p>Konzept und Design</p>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-overlay">
+      <div class="scroll-overlay-content">
+        <span>Marabu Farben</span><br />
+        <p>Umweltberichte 2010 - 2017:</p>
+        <p>Konzept und Design</p>
+      </div>
+    </div>
+    <div class="scroll-controll-wrapper mt-50 observer">
+      <div
+        class="scroll-box-wrapper scroll-box-wrapper-js"
+        data-scrollstart="0"
+      >
+        <div class="padding"></div>
+        <div class="scroll-box scroll-box-js active">
+          <img
+            class="scroll-img"
+            alt="scroll Img"
+            src="./static/img/Woerner-Website_b.jpg"
+          />
+        </div>
+        <div class="scroll-box scroll-box-js">
+          <img
+            class="scroll-img"
+            alt="scroll Img"
+            src="./static/img/Woerner_CD-Bspl_b.jpg"
+          />
+        </div>
+        <div class="scroll-box scroll-box-js">
+          <img
+            class="scroll-img"
+            alt="scroll Img"
+            src="./static/img/Woerner-Brosch_Pitstop-2_b.jpg"
+          />
+        </div>
+        <div class="scroll-box scroll-box-js">
+          <img
+            class="scroll-img"
+            alt="scroll Img"
+            src="./static/img/Woerner-Brosch_Titel_b.jpg"
+          />
+        </div>
+        <div class="padding"></div>
+      </div>
+      <div class="scroll-controls">
+        <button
+          class="arrow --left --arrow-non-active"
+          onclick="setScrollPosition(this, -1)"
+        >
+          <img
+            class="arrow-svg --left"
+            alt="Arrow"
+            src="/static/img/svg/eg-arrow.svg"
+          />
+        </button>
+        <button class="arrow --right" onclick="setScrollPosition(this, 1)">
+          <img
+            class="arrow-svg"
+            alt="Arrow"
+            src="/static/img/svg/eg-arrow.svg"
+          />
+        </button>
+      </div>
+      <div class="scroll-overlay">
+        <div class="scroll-overlay-content">
+          <span>Wörner Automatisierung</span><br />
+          <p class="mt-30">Corporate Identity:</p>
+          <p>Positionierung,</p>
+          <p>Corporate Design.</p>
+          <p class="mt-20">Website, Broschüren, Messedesign etc.:</p>
+          <p>Konzept und Design, Fotografie und Illustration.</p>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-overlay">
+      <div class="scroll-overlay-content">
+        <span>Wörner Automatisierung</span><br />
+        <p>Corporate Identity:</p>
+        <p>Positionierung,Corporate Design.</p>
+        <p class="mt-20">Website, Broschüren etc.:</p>
+        <p>Konzept und Design, Fotografie und Illustration.</p>
+      </div>
+    </div>
+    <div class="container mb-100 mt-100">
+      <p class="introduction-text">
+        <strong
+          >Mit uns als Partner erhält Ihre Marke ein modernes Image und Design,
+          das überzeugt und auch zukünftig Bestand hat.
+        </strong>
+        Denn wir achten auf Relevanz und Wirksamkeit der kommunikativen Inhalte
+        sowie auf Authentizität Ihres visuellen Auftrittes.
+        <a class="button-headline-wrapper" href="/profil.html">
+          <span class="inner-button-wrapper">
+            <button class="arrow-inner-container">
+              <img
+                class="arrow-svg-inner-container"
+                alt="Arrow"
+                src="/static/img/svg/eg-arrow.svg"
+              />
+            </button>
+            <span class="next-headline underline">Profil</span>
+          </span>
+        </a>
+      </p>
+    </div>
+    <div class="projects-grid mb-100">
+      <div class="project-container">
+        <img
+          class="grid-img"
+          alt="grid Img"
+          src="./static/img/LEA-Website_b.jpg"
+        />
+        <div class="grid-overlay">
+          <div class="gird-overlay-content">
+            <span>Ludwigsburger Energieagentur</span>
+            <p class="mt-10">Website:</p>
+            <p>Konzeption, Design, Umsetzung</p>
+            <p class="mt-10">Logo Redesign</p>
+          </div>
+        </div>
+      </div>
+      <div class="project-container">
+        <img
+          class="grid-img"
+          alt="grid Img"
+          src="./static/img/Flow_SWLB_RemseckEnergie_b.jpg"
+        />
+        <div class="grid-overlay">
+          <div class="gird-overlay-content">
+            <span>Stadtwerke Ludwigsburg Kornwestheim</span>
+            <p class="mt-10">Markteinführung REMSECKENERGIE:</p>
+            <p>
+              Corporate Design, Geschäftsausstattung, Webdesign, Werbekampagne
+              etc.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="project-container">
+        <img
+          class="grid-img"
+          alt="grid Img"
+          src="./static/img/MZ-Logo_Visitenk_16_b.jpg"
+        />
+        <div class="grid-overlay">
+          <div class="gird-overlay-content">
+            <span>Müller Ziegler Architekten</span>
+            <p class="mt-10">
+              Corporate Design, Logo, Geschäftsausstattung, Anzeigen
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="project-container">
+        <img
+          class="grid-img"
+          alt="grid Img"
+          src="./static/img/SWLB_Plakat_14_b.jpg"
+        />
+        <div class="grid-overlay">
+          <div class="gird-overlay-content">
+            <span>Stadtwerke Ludwigsburg Kornwestheim</span>
+            <p class="mt-10">Markteinführung SWLB FAVORITENERGIEplus:</p>
+            <p>Kommunikationskonzept, Produktbroschüre, Anzeigen, etc.</p>
+          </div>
+        </div>
+      </div>
+      <div class="project-container">
+        <img
+          class="grid-img"
+          alt="grid Img"
+          src="./static/img/Moll-Kinder_b.jpg"
+        />
+        <div class="grid-overlay">
+          <div class="gird-overlay-content">
+            <span>moll Funktionsmöbel</span>
+            <p class="mt-10">Gesundes Lernen:</p>
+            <p>Katalogintegration, Broschüre</p>
+          </div>
+        </div>
+      </div>
+      <div class="project-container">
+        <img
+          class="grid-img"
+          alt="grid Img"
+          src="./static/img/Kubota_Anzeige_Radlader_b.jpg"
+        />
+        <div class="grid-overlay">
+          <div class="gird-overlay-content">
+            <span>Kubota Baumaschinen</span>
+            <p class="mt-10">Markteinführung Radlader:</p>
+            <p>
+              Kommunikationskonzept, Anzeigenkampagne, Produktübersicht,
+              Messeauftritt etc.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="project-container">
+        <img
+          class="grid-img"
+          alt="grid Img"
+          src="./static/img/Holzmedia_Highlights_b.jpg"
+        />
+        <div class="grid-overlay">
+          <div class="gird-overlay-content">
+            <span>Holzmedia Medienmöbel</span>
+            <p class="mt-10">„Highlights“:</p>
+            <p>Referenzbroschüre</p>
+          </div>
+        </div>
+      </div>
+      <div class="project-container">
+        <img
+          class="grid-img"
+          alt="grid Img"
+          src="./static/img/HERMA-Recycl-SF-Titel_b.jpg"
+        />
+        <div class="grid-overlay">
+          <div class="gird-overlay-content">
+            <span>HERMA Etiketten</span>
+            <p class="mt-10">Markteinführung Recycling-Etiketten:</p>
+            <p>
+              Kommunikationskonzept, Produktbroschüre, Anzeigen, Pop-Up-Display
+              etc.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="project-container">
+        <img
+          class="grid-img"
+          alt="grid Img"
+          src="./static/img/Moll_Scooter_b.jpg"
+        />
+        <div class="grid-overlay">
+          <div class="gird-overlay-content">
+            <span>moll Funktionsmöbel</span>
+            <p class="mt-10">
+              Markteinführung diverser Tisch- und Stuhlsysteme für den
+              Schülerarbeitsplatz:
+            </p>
+            <p>Designkonzept, Sales- und Endverbraucherbroschüren etc.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container mb-100">
+      <p class="introduction-text">
+        Viele Leute denken Wirtschaftlichkeit oder Nachhaltigkeit. Warum
+        eigentlich oder?
+        <strong
+          >Ökologisch und sozial verantwortliches Handeln ist heute
+          unverzichtbar</strong
+        >
+        – und wenn dies glaubwürdig kommuniziert wird, ein nicht zu
+        unterschätzender Wettbewerbsvorteil.
+        <a
+          class="button-headline-wrapper"
+          href="/profil.html?p=nachhaltige-kommunikation"
+        >
+          <span class="inner-button-wrapper">
+            <button class="arrow-inner-container">
+              <img
+                class="arrow-svg-inner-container"
+                alt="Arrow"
+                src="/static/img/svg/eg-arrow.svg"
+              />
+            </button>
+            <span class="next-headline underline"
+              >Nachhaltige Kommunikation</span
+            >
+          </span>
+        </a>
+      </p>
+    </div>
+    <div w3-include-html="footer.html"></div>
+  </body>
 </html>

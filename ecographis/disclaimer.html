@@ -1,102 +1,153 @@
 <!DOCTYPE html>
 <html lang="de">
-	<head>
-		<meta charset="UTF-8" />
-		<meta
-			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no"
-			name="viewport"
-		/>
-		<title>ecographis</title>
-		<script defer src="static/production/js/includeHTML.js"></script>
-		<script defer src="static/production/js/intersection-observer.js"></script>
-		<script defer src="static/production/js/scroll-behaviour.js"></script>
-		<script defer src="static/production/js/animation.js"></script>
-		<script defer src="static/production/js/scroll.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no"
+      name="viewport"
+    />
+    <title>ecographis</title>
+    <script defer src="static/production/js/includeHTML.js"></script>
+    <script defer src="static/production/js/intersection-observer.js"></script>
+    <script defer src="static/production/js/scroll-behaviour.js"></script>
+    <script defer src="static/production/js/animation.js"></script>
+    <script defer src="static/production/js/scroll.js"></script>
 
-		<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,500,500i" rel="stylesheet" />
-		<link rel="stylesheet" href="static/production/css/reset.css" />
-		<link rel="stylesheet" href="static/production/css/base.css" />
-		<link rel="stylesheet" href="static/production/css/navigation.css" />
-		<link rel="stylesheet" href="static/production/css/slider.css" />
-		<link rel="stylesheet" href="static/production/css/profil.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,500,500i"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="static/production/css/reset.css" />
+    <link rel="stylesheet" href="static/production/css/base.css" />
+    <link rel="stylesheet" href="static/production/css/navigation.css" />
+    <link rel="stylesheet" href="static/production/css/slider.css" />
+    <link rel="stylesheet" href="static/production/css/profil.css" />
 
-		<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
-		<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
-		<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
-		<link rel="manifest" href="/favicon/site.webmanifest" />
-		<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5" />
-		<meta name="msapplication-TileColor" content="#da532c" />
-		<meta name="theme-color" content="#ffffff" />
-	</head>
-	<body style="display: flex; flex-direction: column;">
-		<div class="nav-wrapper-fixed">
-			<div class="nav-bar">
-				<a class="logo-link" href="/">
-					<img class="logo" alt="Ecographis Logo" src="/static/img/svg/eg-logo.svg" />
-				</a>
-				<div class="nav-element">
-					<input type="checkbox" id="change-hamburger" onclick="menuAnimation()" />
-					<label for="change-hamburger" class="overlay_label"></label>
-					<label for="change-hamburger" class="hamburger">
-						<span></span>
-						<div class="nav-ele-padding"></div>
-					</label>
-				</div>
-			</div>
-			<div class="menu" style="transform: translate3d(0, -150%, 0);">
-				<div class="nav-grid">
-					<img class="logo-wort-bild" src="/static/img/svg/eg-logo-wort-bild.svg" />
-					<div class="menu-content">
-						<a class="nav-ele" href="/">
-							<div class="nav-ele-pseudo">Home</div>
-						</a>
-						<a class="nav-ele" href="/profil">
-							<div class="nav-ele-pseudo">Profil</div>
-						</a>
-					</div>
-					<div class="menu-contact">
-						<ul class="menu-contact-wrapper">
-							<li class="menu-contact_context">
-								ecographis <span class=" menu-contact_context no-wrap">kommunikation + design</span>
-							</li>
-							<li class="menu-contact_context">Michael Riedel, Dipl. Designer (FH)</li>
-							<li class="menu-contact_context">
-								Conrad-Röntgen Str. 23<br />
-								74321 Bietigheim-Bissingen
-							</li>
-							<li class="menu-contact_context mt-10">
-								<a href="tel:07141-6437851">07141-6437851</a>
-							</li>
-							<li class="menu-contact_context">
-								<a href="mailto:info@ecographis.com">info@ecographis.com</a>
-                            </li>
-                            <li class="menu-contact_context mt-10">
-								<a class='black underline' target='_blank' href="/static/assets/AVG_ecographis.pdf">Allgemeine Vertragsgrundlagen</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="container margin">
-            <h3 class="header-3">Inhalt des Onlineangebotes</h3>
-			<p class="mb-20">
-				Ecographis Kommunikation + Design übernimmt keinerlei Gewähr für die Aktualität, Korrektheit,
-				Vollständigkeit oder Qualität der bereitgestellten Informationen. Ecographis Kommunikation + Design
-				behält es sich ausdrücklich vor, Teile der Seiten oder das gesamte Angebot ohne gesonderte Ankündigung
-				zu verändern, zu ergänzen, zu löschen oder die Veröffentlichung zeitweise oder endgültig einzustellen.
-            </p>
-            <h3 class="header-3">Rechtswirksamkeit dieses Haftungsausschlusses</h3>
-			<p class="mb-20">
-				Sofern Teile oder einzelne Formulierungen dieses Textes der geltenden Rechtslage nicht, nicht mehr oder
-				nicht vollständig entsprechen sollten, bleiben die übrigen Teile des Dokumentes in ihrem Inhalt und
-				ihrer Gültigkeit davon unberührt.
-            </p>
-            <h3 class="header-3">Verweise und Links</h3>
-			<p class="mb-20">
-				Ecographis Kommunikation + Design  ist als Inhaltsanbieter für die „eigenen Inhalte“ nach den allgemeinen Gesetzen verantwortlich. Für die von anderen Anbietern bereitgehaltenen Inhalte (fremde Inhalte), die über  Querverweise (“Links„) bereitgehalten werden, ist Ecographis Kommunikation + Design nur dann verantwortlich, wenn es von ihnen positive Kenntnis hat und es ihm technisch möglich und zumutbar ist, deren Nutzung zu verhindern.
-			</p>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="/favicon/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+  </head>
+  <body style="display: flex; flex-direction: column">
+    <div class="nav-wrapper-fixed">
+      <div class="nav-bar">
+        <a class="logo-link" href="/">
+          <img
+            class="logo"
+            alt="Ecographis Logo"
+            src="/static/img/svg/eg-logo.svg"
+          />
+        </a>
+        <div class="nav-element">
+          <input
+            type="checkbox"
+            id="change-hamburger"
+            onclick="menuAnimation()"
+          />
+          <label for="change-hamburger" class="overlay_label"></label>
+          <label for="change-hamburger" class="hamburger">
+            <span></span>
+            <div class="nav-ele-padding"></div>
+          </label>
         </div>
-        <div style="margin-top: auto" w3-include-html="footer.html"></div>
-	</body>
+      </div>
+      <div class="menu" style="transform: translate3d(0, -150%, 0)">
+        <div class="nav-grid">
+          <img
+            class="logo-wort-bild"
+            src="/static/img/svg/eg-logo-wort-bild.svg"
+          />
+          <div class="menu-content">
+            <a class="nav-ele" href="/">
+              <div class="nav-ele-pseudo">Home</div>
+            </a>
+            <a class="nav-ele" href="/profil">
+              <div class="nav-ele-pseudo">Profil</div>
+            </a>
+          </div>
+          <div class="menu-contact">
+            <ul class="menu-contact-wrapper">
+              <li class="menu-contact_context">
+                ecographis
+                <span class="menu-contact_context no-wrap"
+                  >kommunikation + design</span
+                >
+              </li>
+              <li class="menu-contact_context">
+                Michael Riedel, Dipl. Designer (FH)
+              </li>
+              <li class="menu-contact_context">
+                Conrad-Röntgen Str. 23<br />
+                74321 Bietigheim-Bissingen
+              </li>
+              <li class="menu-contact_context mt-10">
+                <a href="tel:0171 6848178">0171 6848178</a>
+              </li>
+              <li class="menu-contact_context">
+                <a href="mailto:info@ecographis.com">info@ecographis.com</a>
+              </li>
+              <li class="menu-contact_context mt-10">
+                <a
+                  class="black underline"
+                  target="_blank"
+                  href="/static/assets/AVG_ecographis.pdf"
+                  >Allgemeine Vertragsgrundlagen</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container margin">
+      <h3 class="header-3">Inhalt des Onlineangebotes</h3>
+      <p class="mb-20">
+        Ecographis Kommunikation + Design übernimmt keinerlei Gewähr für die
+        Aktualität, Korrektheit, Vollständigkeit oder Qualität der
+        bereitgestellten Informationen. Ecographis Kommunikation + Design behält
+        es sich ausdrücklich vor, Teile der Seiten oder das gesamte Angebot ohne
+        gesonderte Ankündigung zu verändern, zu ergänzen, zu löschen oder die
+        Veröffentlichung zeitweise oder endgültig einzustellen.
+      </p>
+      <h3 class="header-3">Rechtswirksamkeit dieses Haftungsausschlusses</h3>
+      <p class="mb-20">
+        Sofern Teile oder einzelne Formulierungen dieses Textes der geltenden
+        Rechtslage nicht, nicht mehr oder nicht vollständig entsprechen sollten,
+        bleiben die übrigen Teile des Dokumentes in ihrem Inhalt und ihrer
+        Gültigkeit davon unberührt.
+      </p>
+      <h3 class="header-3">Verweise und Links</h3>
+      <p class="mb-20">
+        Ecographis Kommunikation + Design ist als Inhaltsanbieter für die
+        „eigenen Inhalte“ nach den allgemeinen Gesetzen verantwortlich. Für die
+        von anderen Anbietern bereitgehaltenen Inhalte (fremde Inhalte), die
+        über Querverweise (“Links„) bereitgehalten werden, ist Ecographis
+        Kommunikation + Design nur dann verantwortlich, wenn es von ihnen
+        positive Kenntnis hat und es ihm technisch möglich und zumutbar ist,
+        deren Nutzung zu verhindern.
+      </p>
+    </div>
+    <div style="margin-top: auto" w3-include-html="footer.html"></div>
+  </body>
 </html>
