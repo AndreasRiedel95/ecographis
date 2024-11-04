@@ -2,7 +2,7 @@
 
 .scroll-wrapper-active
 	animation: fadeInLeftBanner 0.8s
-	animation-timing-function: cubic-bezier(.32,.01,.36,.98) 
+	animation-timing-function: cubic-bezier(.32,.01,.36,.98)
 	animation-fill-mode: forwards
 @keyframes fadeInLeftBanner
 	@include fadeInLeftBanner
@@ -24,7 +24,7 @@
 		&:hover .scroll-overlay
 			opacity: 1
 		&:hover .scroll-overlay-content
-			animation: fadeInLeft 0.8s 
+			animation: fadeInLeft 0.8s
 			animation-fill-mode: forwards
 	@media screen and (max-width: 850px)
 		height: 300px
@@ -62,10 +62,12 @@
 			scroll-padding-left: 0px
 	&.--active
 		cursor: grabbing
-	
+
 .scroll-box
 	position: relative
-	height: 450px
+	display: flex
+	height: 100%
+	max-height: 450px
 	flex-shrink: 0
 	user-select: none
 	user-drag: none
@@ -90,9 +92,15 @@
 			max-width: 90vw
 			object-fit: cover
 
+.responsive-img
+	@media screen and (max-width: 450px)
+		object-fit: contain !important
+		margin-top: auto
+		height: auto
+
 .padding
 	background-color: white
-	width: calc((100vw  - 950px) / 2 )
+	width: calc((100vw - 950px) / 2 )
 	height: 100%
 	flex-shrink: 0
 	@media screen and (max-width: 1048px)
@@ -105,8 +113,8 @@
 	top: 0
 	bottom: 0
 	width: 350px
-	background-color: rgba(35, 126, 198, 0.9) 
-	margin-left: calc((100vw  - 950px) / 2 )
+	background-color: rgba(35, 126, 198, 0.9)
+	margin-left: calc((100vw - 950px) / 2 )
 	opacity: 0
 	pointer-events: none
 	overflow: hidden
@@ -123,7 +131,6 @@
 		margin-right: 30px
 	@media screen and (max-width: 450px)
 		margin-left: 20px
-
 
 .scroll-overlay-content
 	color: white
@@ -176,7 +183,6 @@
 		filter: brightness(80%) contrast(140%)
 	@media screen and (max-width: 850px)
 		display: none
-
 
 .arrow-svg
 	width: 50px
